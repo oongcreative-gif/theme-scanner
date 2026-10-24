@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>테마 스캐너</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+<style>
+:root{
+  --paper:#edf0f4; --panel:#ffffff; --ink:#18202c; --sub:#667085; --rule:#d8dde5;
+  --up:#e0383e; --down:#2b6cde; --mark:#f08c00; --hover:#f4f6f9; --env:#111111; --near:rgba(240,140,0,.10);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --paper:#0d1218; --panel:#141b24; --ink:#e6ebf2; --sub:#8a96a8; --rule:#232d3a;
+    --up:#ff6a70; --down:#6ea2ff; --mark:#ffa62b; --hover:#1a232e; --env:#e6ebf2; --near:rgba(255,166,43,.12);
+  }
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font:15px/1.5 "Pretendard Variable", Pretendard, -apple-system, "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+  font-variant-numeric:tabular-nums;
+}
+.wrap{max-width:1480px; margin:0 auto; padding:0 16px}
+header{padding:22px 0 14px}
+.brand{display:flex; align-items:baseline; gap:12px; flex-wrap:wrap}
+h1{margin:0; font-size:22px; font-weight:750; letter-spacing:-.02em}
+.rule-line{margin:2px 0 0; color:var(--sub); font-size:13px}
+.nav a{color:var(--sub); font-size:13px; text-decoration:none; border-bottom:1px solid var(--rule)}
+.nav a:hover{color:var(--ink)}
+.stamp{margin-left:auto; color:var(--sub); font-size:13px; text-align:right}
+.stamp b{color:var(--ink); font-weight:650}
+
+.board{background:var(--panel); border:1px solid var(--rule); padding:12px 14px 14px; margin-bottom:14px}
+.board-head{display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:10px}
+.board-head h2{margin:0; font-size:15px; font-weight:700}
+.board-head .sub{color:var(--sub); font-size:12.5px}
+.ranks{display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:8px}
+.rk{display:grid; grid-template-columns:30px 1fr; gap:2px 8px; align-items:start; padding:8px 10px; border:1px solid var(--rule); border-radius:5px; background:var(--paper); cursor:pointer; text-align:left; color:inherit; font:inherit}
+.rk:hover{background:var(--hover)}
+.rk[aria-pressed="true"]{border-color:var(--mark); box-shadow:inset 3px 0 0 var(--mark)}
+.rk .n{grid-row:1 / span 2; font-size:22px; font-weight:800; color:var(--mark); line-height:1.2; text-align:center}
+.rk:nth-child(n+4) .n{color:var(--sub)}
+.rk b{font-size:14.5px}
+.rk small{color:var(--sub); font-size:12px; line-height:1.35}
+.layout{display:grid; grid-template-columns:minmax(0,1fr) 600px; gap:14px; height:700px; margin-bottom:16px}
+.chartbox{background:var(--panel); border:1px solid var(--rule); padding:14px 16px 10px; display:flex; flex-direction:column; min-height:0; min-width:0}
+.ch-head{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap}
+.ch-head h2{margin:0; font-size:18px; letter-spacing:-.01em}
+.ch-meta{color:var(--sub); font-size:13px}
+.ch-tools{display:flex; align-items:center; gap:8px; margin-top:8px; flex-wrap:wrap}
+.seg{display:inline-flex; border:1px solid var(--rule); border-radius:4px; overflow:hidden}
+.seg button{padding:5px 12px; border:0; background:transparent; color:var(--sub); font:inherit; font-size:13px; cursor:pointer}
+.seg button + button{border-left:1px solid var(--rule)}
+.seg button[aria-pressed="true"]{background:var(--mark); color:#fff; font-weight:650}
+.seg button:focus-visible{outline:2px solid var(--mark); outline-offset:-2px}
+#chart{flex:1; min-height:240px; margin-top:10px}
+.view{margin-top:6px; color:var(--sub); font-size:12.5px}
+.key{display:flex; gap:16px; flex-wrap:wrap; color:var(--sub); font-size:12.5px; margin-top:6px}
+.log{background:var(--panel); border:1px solid var(--rule); display:flex; flex-direction:column; min-height:0; min-width:0}
+.log-head{display:flex; align-items:center; justify-content:space-between; gap:10px; padding:12px 14px; flex:none; border-bottom:1px solid var(--rule); flex-wrap:wrap}
+.log h2{margin:0; font-size:14px; font-weight:700}
+.tools{display:flex; align-items:center; gap:10px; flex-wrap:wrap}
+.tools input[type=search]{width:120px; max-width:100%; padding:7px 10px; border:1px solid var(--rule); border-radius:4px; background:var(--paper); color:var(--ink); font:inherit; font-size:14px}
+.tools input:focus-visible{outline:2px solid var(--mark); outline-offset:1px}
+.fbar{padding:8px 14px; border-bottom:1px solid var(--rule); font-size:13px; color:var(--sub); display:flex; align-items:center; gap:8px; flex:none}
+.fbar b{color:var(--ink)}
+.scroll{flex:1; min-height:0; overflow-y:auto; overflow-x:auto}
+table{width:100%; border-collapse:collapse}
+th, td{padding:8px 10px; text-align:left; border-bottom:1px solid var(--rule); font-size:14px; vertical-align:top}
+th{color:var(--sub); font-weight:600; font-size:12.5px; background:var(--panel); position:sticky; top:0; z-index:1; box-shadow:0 1px 0 var(--rule); white-space:nowrap}
+td.nm{min-width:210px}
+td.nm small{display:block; margin:1px 0 0; line-height:1.4}
+td.dt, td.num{white-space:nowrap}
+tbody tr{cursor:pointer}
+tbody tr:hover{background:var(--hover)}
+tbody tr[aria-selected="true"]{box-shadow:inset 3px 0 0 var(--mark); background:var(--hover)}
+td.num, th.num{text-align:right}
+td small{color:var(--sub); font-size:12px}
+.up{color:var(--up)} .down{color:var(--down)}
+.chips{display:flex; flex-wrap:wrap; gap:3px; margin-top:4px}
+.chip{display:inline-block; padding:0 6px; border-radius:3px; font-size:11.5px; border:1px solid var(--rule); color:var(--sub); background:var(--paper); cursor:pointer; font-family:inherit; line-height:1.5}
+.chip:hover, .chip.on{border-color:var(--mark); color:var(--mark)}
+.new{display:inline-block; padding:0 6px; margin-left:6px; border-radius:3px; font-size:11.5px; border:1px solid var(--up); color:var(--up)}
+.empty{padding:18px 16px; color:var(--sub); font-size:14px; margin:0}
+.warn{margin:8px 0 0; padding:8px 12px; border:1px solid var(--mark); color:var(--mark); font-size:13px; background:var(--near); border-radius:4px}
+@media (max-width:1040px){
+  .layout{grid-template-columns:1fr; height:auto}
+  .chartbox{height:440px}
+  .log{height:600px}
+  .stamp{margin-left:0; text-align:left; width:100%}
+}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <h1>테마 스캐너</h1>
+      <div class="stamp" id="stamp">불러오는 중</div>
+    </div>
+    <p class="rule-line" id="rule">3개월 전고점을 돌파한 강양봉(+15%, 거래대금 500억 이상)을 테마별로 모아 보여줘요</p>
+    <p class="warn" id="warn" hidden></p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="board" aria-label="테마 순위">
+    <div class="board-head">
+      <h2>지금 가장 강한 테마 TOP 10</h2>
+      <div class="seg" id="rkSpan" role="group" aria-label="순위 기간">
+        <button type="button" data-d="7" aria-pressed="false">최근 7일</button>
+        <button type="button" data-d="30" aria-pressed="true">최근 30일</button>
+        <button type="button" data-d="90" aria-pressed="false">최근 90일</button>
+      </div>
+      <span class="sub" id="rkSub">같은 테마에서 조건에 걸린 종목 수가 많은 순서 (같으면 거래대금 합계 순)</span>
+    </div>
+    <div class="ranks" id="ranks"></div>
+  </section>
+
+  <div class="layout">
+    <section class="chartbox" aria-label="차트">
+      <div class="ch-head"><h2 id="chTitle">차트</h2><span class="ch-meta" id="chMeta"></span></div>
+      <div class="ch-tools">
+        <div class="seg" id="seg" role="group" aria-label="표시할 봉 수">
+          <button type="button" data-n="60" aria-pressed="false">60봉</button>
+          <button type="button" data-n="120" aria-pressed="false">120봉</button>
+          <button type="button" data-n="0" aria-pressed="true">전체</button>
+        </div>
+      </div>
+      <div id="chart" role="img" aria-label="캔들 차트"></div>
+      <div class="view" id="view"></div>
+      <div class="key"><span>● 포착일(돌파 강양봉)</span><span>▲ 바닥(3개월 최저 저가)</span><span>점선 = 돌파한 3개월 전고점</span></div>
+    </section>
+
+    <section class="log" aria-label="포착 종목">
+      <div class="log-head">
+        <h2 id="listTitle">포착 종목</h2>
+        <div class="tools">
+          <div class="seg" id="view2" role="group" aria-label="기간">
+            <button type="button" data-v="30" aria-pressed="true">최근 30일</button>
+            <button type="button" data-v="0" aria-pressed="false">전체</button>
+          </div>
+          <div class="seg" id="sort" role="group" aria-label="정렬">
+            <button type="button" data-s="date" aria-pressed="true">최근순</button>
+            <button type="button" data-s="rise" aria-pressed="false">바닥대비순</button>
+            <button type="button" data-s="amt" aria-pressed="false">거래대금순</button>
+          </div>
+          <input id="q" type="search" placeholder="종목 검색" aria-label="종목 검색">
+        </div>
+      </div>
+      <div class="fbar" id="fbar" hidden><span>테마 필터: <b id="fname"></b></span><button type="button" class="chip" id="fclear">해제 ✕</button></div>
+      <div class="scroll">
+        <table>
+          <thead><tr><th>종목 / 테마</th><th class="dt">포착일</th><th class="num">바닥대비</th></tr></thead>
+          <tbody id="body"></tbody>
+        </table>
+      </div>
+      <p class="empty" id="empty" hidden></p>
+    </section>
+  </div>
+</main>
+
+<script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+<script>
+(() => {
+  const nf = new Intl.NumberFormat('ko-KR');
+  const $ = (s) => document.querySelector(s);
+  const esc = (v) => String(v ?? '').replace(/[&<>"']/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const dark = () => matchMedia('(prefers-color-scheme: dark)').matches;
+  const getJSON = async (p) => {
+    const r = await fetch(p + '?t=' + Date.now());
+    if (!r.ok) throw new Error(p + ' ' + r.status);
+    return r.json();
+  };
+  const cap = (v) => { if (!v) return '-'; const j = v / 1e12; return j >= 1 ? (j >= 100 ? nf.format(Math.round(j)) : j.toFixed(1)) + '조' : nf.format(Math.round(v / 1e8)) + '억'; };
+  const eok = (v) => (v >= 10000 ? (v / 10000).toFixed(1) + '조' : nf.format(v) + '억');
+  const pct = (v, d = 0) => (v >= 0 ? '+' : '') + v.toFixed(d) + '%';
+  const addDays = (iso, n) => { const d = new Date(iso + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + n); return d.toISOString().slice(0, 10); };
+
+  let items = [], asof = null;
+  let sortBy = 'date', listDays = 30, rankDays = 30, theme = null, q = '', selected = null, span = 0, cur = null;
+  let chart = null, candle = null, vol = null, lines = [];
+
+  const palette = () => dark()
+    ? {bg:'#141b24', text:'#8a96a8', grid:'#1f2833', up:'#ff6a70', down:'#6ea2ff', vu:'rgba(255,106,112,.35)', vd:'rgba(110,162,255,.35)'}
+    : {bg:'#ffffff', text:'#667085', grid:'#eef0f4', up:'#e0383e', down:'#2b6cde', vu:'rgba(224,56,62,.3)', vd:'rgba(43,108,222,.3)'};
+
+  function ensureChart() {
+    if (chart) return;
+    const el = $('#chart'), p = palette();
+    chart = LightweightCharts.createChart(el, {
+      width: el.clientWidth, height: el.clientHeight,
+      layout: {background: {type: 'solid', color: p.bg}, textColor: p.text, fontFamily: 'inherit'},
+      grid: {vertLines: {color: p.grid}, horzLines: {color: p.grid}},
+      rightPriceScale: {borderColor: p.grid},
+      timeScale: {borderColor: p.grid, timeVisible: false},
+      crosshair: {mode: 0},
+    });
+    candle = chart.addCandlestickSeries({
+      upColor: p.up, downColor: p.down, borderUpColor: p.up, borderDownColor: p.down,
+      wickUpColor: p.up, wickDownColor: p.down, priceFormat: {type: 'price', precision: 0, minMove: 1},
+    });
+    candle.priceScale().applyOptions({scaleMargins: {top: 0.06, bottom: 0.25}});
+    vol = chart.addHistogramSeries({priceFormat: {type: 'volume'}, priceScaleId: 'vol'});
+    chart.priceScale('vol').applyOptions({scaleMargins: {top: 0.8, bottom: 0}});
+    new ResizeObserver(() => chart.applyOptions({width: el.clientWidth, height: el.clientHeight})).observe(el);
+    chart.timeScale().subscribeVisibleLogicalRangeChange(onRange);
+  }
+
+  function onRange(r) {
+    const v = $('#view');
+    if (!cur || !r) { v.textContent = ''; return; }
+    const n = cur.t.length;
+    const from = Math.max(0, Math.ceil(r.from)), to = Math.min(n - 1, Math.floor(r.to));
+    v.textContent = to < from ? '' : `화면에 ${to - from + 1}봉 (${cur.t[from]} ~ ${cur.t[to]})`;
+  }
+
+  function applyRange() {
+    if (!chart || !cur) return;
+    const n = cur.t.length;
+    if (!span || span >= n) { chart.timeScale().fitContent(); return; }
+    chart.timeScale().setVisibleLogicalRange({from: n - span - 0.5, to: n - 0.5});
+  }
+
+  async function showChart(it) {
+    ensureChart();
+    $('#chTitle').textContent = `${it.name} ${it.code}`;
+    $('#chMeta').textContent = `${it.market} · 시총 ${cap(it.marcap)} · ${it.date} 종가 ${nf.format(it.close)}원 (${pct(it.change_pct, 1)}, 거래대금 ${eok(it.amount)}) · 바닥 ${it.bottom_date} 대비 ${pct(it.rise_pct)} · 포착 후 ${pct(it.since_pct, 1)}`;
+    let d;
+    try { d = await getJSON('data/charts/' + it.code + '.json'); }
+    catch (e) { $('#chMeta').textContent = '차트 데이터를 불러오지 못했어요. 잠시 뒤 다시 눌러 주세요.'; return; }
+    cur = d;
+    const p = palette();
+    candle.setData(d.t.map((t, i) => ({time: t, open: d.o[i], high: d.h[i], low: d.l[i], close: d.c[i]})));
+    vol.setData(d.t.map((t, i) => ({time: t, value: d.v[i] || 0, color: d.c[i] >= d.o[i] ? p.vu : p.vd})));
+    lines.forEach((l) => candle.removePriceLine(l)); lines = [];
+    lines.push(candle.createPriceLine({price: it.prev_high, color: '#f08c00', lineWidth: 1, lineStyle: 2, axisLabelVisible: true, title: '전고점'}));
+    const set = new Set(d.t), marks = [];
+    (d.events || []).forEach((e) => { if (set.has(e.date)) marks.push({time: e.date, position: 'aboveBar', color: '#e0383e', shape: 'circle', text: e.date === it.date ? '포착' : '포착'}); });
+    if (set.has(it.bottom_date)) marks.push({time: it.bottom_date, position: 'belowBar', color: '#2b6cde', shape: 'arrowUp', text: '바닥'});
+    marks.sort((a, b) => (a.time < b.time ? -1 : a.time > b.time ? 1 : 0));
+    candle.setMarkers(marks);
+    applyRange();
+  }
+
+  // ---- 순위: 기준일(asof)에서 rankDays일 안에 포착된 종목을 테마별로 집계
+  function ranking() {
+    const cut = addDays(asof, -rankDays), agg = new Map();
+    items.forEach((it) => {
+      if (it.date < cut) return;
+      it.themes.forEach((t) => {
+        if (!agg.has(t)) agg.set(t, {theme: t, codes: new Map(), amount: 0});
+        const a = agg.get(t);
+        a.amount += it.amount;
+        const prev = a.codes.get(it.code);
+        if (!prev || prev.date < it.date) a.codes.set(it.code, {name: it.name, date: it.date, rise: it.rise_pct});
+      });
+    });
+    return [...agg.values()].sort((a, b) => b.codes.size - a.codes.size || b.amount - a.amount).slice(0, 10);
+  }
+
+  function renderRanks() {
+    const rows = ranking();
+    $('#ranks').innerHTML = rows.length ? rows.map((r, i) => {
+      const names = [...r.codes.values()].sort((a, b) => (a.date < b.date ? 1 : -1)).map((c) => c.name);
+      return `<button type="button" class="rk" data-t="${esc(r.theme)}" aria-pressed="${theme === r.theme}">
+        <span class="n">${i + 1}</span>
+        <span><b>${esc(r.theme)}</b> <small>${r.codes.size}종목 · 거래대금 합 ${eok(r.amount)}</small></span>
+        <small>${esc(names.slice(0, 4).join(', '))}${names.length > 4 ? ' 외 ' + (names.length - 4) : ''}</small>
+      </button>`;
+    }).join('') : '<p class="empty">이 기간에 포착된 테마가 없어요.</p>';
+    $('#ranks').querySelectorAll('.rk').forEach((b) => b.addEventListener('click', () => setTheme(theme === b.dataset.t ? null : b.dataset.t)));
+  }
+
+  function setTheme(t) {
+    theme = t;
+    renderRanks(); renderList();
+  }
+
+  function visible() {
+    const cut = listDays ? addDays(asof, -listDays) : '';
+    const ql = q.trim().toLowerCase();
+    let rows = items.filter((h) => h.date >= cut && (!theme || h.themes.includes(theme))
+      && (!ql || h.name.toLowerCase().includes(ql) || h.code.includes(ql)));
+    if (sortBy === 'date') rows = rows.slice().sort((a, b) => (a.date < b.date ? 1 : a.date > b.date ? -1 : b.amount - a.amount));
+    else if (sortBy === 'rise') rows = rows.slice().sort((a, b) => b.rise_pct - a.rise_pct);
+    else rows = rows.slice().sort((a, b) => b.amount - a.amount);
+    return rows;
+  }
+
+  function renderList() {
+    const rows = visible();
+    $('#body').innerHTML = rows.map((h, i) => `
+      <tr data-i="${i}" aria-selected="${selected === h.code + h.date}">
+        <td class="nm"><b>${esc(h.name)}</b>${h.date === asof ? '<span class="new">신규</span>' : ''}
+          <small>시총 ${cap(h.marcap)} · ${pct(h.change_pct, 1)} · 거래대금 ${eok(h.amount)} · 포착 후 ${pct(h.since_pct, 1)}</small>
+          <div class="chips">${h.themes.length ? h.themes.slice(0, 6).map((t) => `<button type="button" class="chip${t === theme ? ' on' : ''}" data-t="${esc(t)}">${esc(t)}</button>`).join('') + (h.themes.length > 6 ? `<small>+${h.themes.length - 6}</small>` : '') : '<small>테마 정보 없음</small>'}</div></td>
+        <td class="dt">${esc(h.date.slice(5))}</td>
+        <td class="num up"><b>${pct(h.rise_pct)}</b></td>
+      </tr>`).join('');
+    const empty = $('#empty');
+    empty.hidden = rows.length > 0;
+    empty.textContent = items.length ? '조건에 맞는 종목이 없어요.' : '아직 데이터가 없어요. GitHub Actions에서 theme_scan을 한 번 실행해 주세요.';
+    $('#body').querySelectorAll('tr').forEach((tr) => tr.addEventListener('click', (ev) => {
+      const chip = ev.target.closest('.chip');
+      if (chip) { setTheme(theme === chip.dataset.t ? null : chip.dataset.t); return; }
+      const h = rows[+tr.dataset.i];
+      selected = h.code + h.date;
+      $('#body').querySelectorAll('tr').forEach((x) => x.setAttribute('aria-selected', String(x === tr)));
+      showChart(h);
+    }));
+    $('#listTitle').textContent = `포착 종목 (${nf.format(rows.length)})`;
+    $('#fbar').hidden = !theme;
+    $('#fname').textContent = theme || '';
+  }
+
+  function wire() {
+    const seg = (sel, key, fn) => document.querySelectorAll(sel + ' button').forEach((b) => b.addEventListener('click', () => {
+      document.querySelectorAll(sel + ' button').forEach((x) => x.setAttribute('aria-pressed', String(x === b)));
+      fn(b.dataset[key]);
+    }));
+    seg('#seg', 'n', (v) => { span = +v; applyRange(); });
+    seg('#sort', 's', (v) => { sortBy = v; renderList(); });
+    seg('#view2', 'v', (v) => { listDays = +v; renderList(); });
+    seg('#rkSpan', 'd', (v) => { rankDays = +v; renderRanks(); });
+    $('#q').addEventListener('input', (e) => { q = e.target.value; renderList(); });
+    $('#fclear').addEventListener('click', () => setTheme(null));
+  }
+
+  async function init() {
+    wire();
+    let data = {items: [], asof: null};
+    try { data = await getJSON('data/list.json'); } catch (e) { /* 아래 안내 문구로 처리 */ }
+    items = (data.items || []).map((h) => ({...h, themes: h.themes || []}));
+    asof = data.asof || new Date().toISOString().slice(0, 10);
+    const p = data.params || {};
+    $('#rule').textContent = `${data.since || ''}부터 · 종가 +${p.min_change || 15}% 양봉 · 거래대금 ${nf.format(p.min_amount_eok || 500)}억 이상 · 종가가 직전 3개월 고점 돌파 · 테마는 네이버 금융 기준`;
+    const today = items.filter((h) => h.date === asof).length;
+    $('#stamp').innerHTML = data.asof
+      ? `<b>${esc(data.asof)}</b> 장 마감 기준 · 오늘 포착 ${nf.format(today)}건 · 누적 ${nf.format(items.length)}건 · 갱신 ${esc((data.updated_at || '').slice(0, 16).replace('T', ' '))}`
+      : '스캔 기록 없음';
+    const w = $('#warn');
+    if (data.theme_status === 'none') { w.hidden = false; w.textContent = '네이버 테마 정보를 가져오지 못해서 테마가 비어 있어요. 다음 스캔 때 다시 시도해요.'; }
+    else if (data.theme_status === 'cache') { w.hidden = false; w.textContent = '오늘은 네이버 테마를 새로 못 가져와서 지난번 테마 정보로 보여주고 있어요.'; }
+    renderRanks(); renderList();
+    const first = visible()[0];
+    if (first) { selected = first.code + first.date; renderList(); showChart(first); } else ensureChart();
+  }
+  init();
+})();
+</script>
+</body>
+</html>
