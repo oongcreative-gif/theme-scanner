@@ -1,0 +1,54 @@
+name: theme_scan
+
+on:
+  schedule:
+    - cron: '5 10 * * 1-5'      # 한국시간 19:05 (평일)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: '휴장일/장 마감 전에도 강제로 실행하려면 1'
+        required: false
+        default: ''
+        type: string
+
+permissions:
+  contents: write
+
+concurrency:
+  group: scan
+  cancel-in-progress: false
+
+jobs:
+  theme_scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+
+      - name: Install
+        run: pip install -r requirements.txt
+
+      - name: Theme scan
+        run: python theme_scan.py
+        env:
+          SITE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+          FORCE: ${{ github.event.inputs.force }}
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "변경 없음"
+          else
+            git commit -m "theme_scan $(TZ=Asia/Seoul date +%F)"
+            git pull --rebase origin "${GITHUB_REF_NAME}" || true
+            git push
+          fi
