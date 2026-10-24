@@ -151,12 +151,12 @@ def parse_theme_stocks(j):
     return out
 
 
-def _paged(url_of, parse, first_diag=None, max_pages=40):
+def _paged(url_of, parse, first_diag=None, max_pages=40, size=100):
     """startIdx 가 '쪽 번호'인지 '건너뛸 개수'인지 확실하지 않아서 두 방식을 모두 시도해 합칩니다."""
     got, order = {}, []
     for mode in ('page', 'offset'):
         for n in range(max_pages):
-            j = http_json(url_of(n if mode == 'page' else n * 100))
+            j = http_json(url_of(n if mode == 'page' else n * size))
             if first_diag and mode == 'page' and n == 0:
                 first_diag(j)
             new = [x for x in parse(j) if (x[0] if isinstance(x, tuple) else x) not in got]
@@ -184,8 +184,8 @@ def fetch_themes():
         fails = 0
         for tid, name in listed:
             try:
-                codes = _paged(lambda n, tid=tid: f'{API}/{tid}/stocklist?marketType=ALL&orderType=quantTop&startIdx={n}&pageSize=100',
-                               parse_theme_stocks, max_pages=10)
+                codes = _paged(lambda n, tid=tid: f'{API}/{tid}/stocklist?marketType=ALL&orderType=quantTop&startIdx={n}&pageSize=20',
+                               parse_theme_stocks, max_pages=15, size=20)
                 if codes:
                     themes[name] = codes
                 else:
