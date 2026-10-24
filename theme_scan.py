@@ -129,7 +129,11 @@ def fetch_themes():
     try:
         ids = {}
         for page in range(1, 40):
-            found = parse_theme_list(http_get(f'{NAVER}/sise/theme.naver?&page={page}'))
+            text = http_get(f'{NAVER}/sise/theme.naver?&page={page}')
+            if page == 1:
+                print(f'[진단] 테마 목록 1쪽: {len(text)}자, 앞부분: {text[:150]!r}')
+                print(f'[진단] 테마 링크 후보 {text.count("sise_group_detail")}개, 종목 링크 후보 {text.count("/item/main")}개')
+            found = parse_theme_list(text)
             new = [(i, n) for i, n in found if i not in ids]
             if not new:
                 break
