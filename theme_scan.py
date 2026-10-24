@@ -42,7 +42,6 @@ MAX_WORKERS = 8
 MAX_ERROR_RATIO = 0.2
 MIN_LISTING = 1000                   # 종목 목록이 이보다 적으면 이상한 것으로 봄
 
-NAVER = 'https://finance.naver.com'
 UA = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) '
                     'Chrome/124.0 Safari/537.36', 'Accept-Language': 'ko-KR,ko;q=0.9'}
 
@@ -100,63 +99,103 @@ def get_universe():
 
 
 # ---------------------------------------------------------------- 네이버 테마
-def http_get(url):
-    r = requests.get(url, headers=UA, timeout=20)
+# 네이버가 증권 화면을 새로 바꿔서(React) 예전 finance.naver.com 표 방식은 못 읽어요.
+# 지금은 새 증권(stock.naver.com)이 쓰는 데이터 주소를 읽습니다.
+API = 'https://stock.naver.com/api/domestic/market/theme'
+API_HEADERS = {**UA, 'Accept': 'application/json, text/plain, */*', 'Referer': 'https://stock.naver.com/market/stock/kr/theme'}
+ID_KEYS = ('no', 'groupNo', 'themeNo', 'categoryNo', 'id')
+NAME_KEYS = ('name', 'groupName', 'themeName', 'categoryName', 'title')
+CODE_KEYS = ('itemCode', 'stockCode', 'symbolCode', 'code', 'reutersCode')
+RE_CODE = re.compile(r'^[0-9A-Z]{6}$')
+
+
+def http_json(url):
+    r = requests.get(url, headers=API_HEADERS, timeout=20)
     r.raise_for_status()
-    return r.content.decode('cp949', errors='replace')
+    return json.loads(r.content.decode('utf-8', errors='replace'))
 
 
-RE_THEME = re.compile(r'sise_group_detail\.naver\?type=theme(?:&amp;|&)no=(\d+)[^>]*>\s*([^<]+?)\s*</a>')
-RE_STOCK = re.compile(r'/item/main\.naver\?code=(\d{6})[^>]*>\s*([^<]+?)\s*</a>')
+def _dicts(obj):
+    if isinstance(obj, dict):
+        yield obj
+        for v in obj.values():
+            yield from _dicts(v)
+    elif isinstance(obj, list):
+        for v in obj:
+            yield from _dicts(v)
 
 
-def parse_theme_list(text):
-    return [(m.group(1), html.unescape(m.group(2)).strip()) for m in RE_THEME.finditer(text)]
-
-
-def parse_theme_stocks(text):
-    seen, out = set(), []
-    for m in RE_STOCK.finditer(text):
-        if m.group(1) not in seen:
-            seen.add(m.group(1))
-            out.append(m.group(1))
+def parse_theme_list(j):
+    """[(번호, 이름)] - 응답 모양이 조금 달라도 읽을 수 있게 느슨하게 찾습니다"""
+    out = []
+    for d in _dicts(j):
+        if any(isinstance(d.get(k), str) and RE_CODE.match(d.get(k, '')) for k in CODE_KEYS):
+            continue                                             # 종목 정보는 건너뜀
+        tid = next((d[k] for k in ID_KEYS if k in d and str(d[k]).isdigit()), None)
+        name = next((d[k] for k in NAME_KEYS if isinstance(d.get(k), str) and d[k].strip()), None)
+        if tid is not None and name:
+            out.append((str(tid), html.unescape(name).strip()))
     return out
 
 
-def fetch_themes():
-    """{테마이름: [종목코드,...]} - 네이버 금융 테마. 실패하면 저장해 둔 값을 씁니다."""
-    themes = {}
-    try:
-        ids = {}
-        for page in range(1, 40):
-            text = http_get(f'{NAVER}/sise/theme.naver?&page={page}')
-            if page == 1:
-                print(f'[진단] 테마 목록 1쪽: {len(text)}자, 앞부분: {text[:150]!r}')
-                print(f'[진단] 테마 링크 후보 {text.count("sise_group_detail")}개, 종목 링크 후보 {text.count("/item/main")}개')
-            found = parse_theme_list(text)
-            new = [(i, n) for i, n in found if i not in ids]
+def parse_theme_stocks(j):
+    seen, out = set(), []
+    for d in _dicts(j):
+        for k in CODE_KEYS:
+            v = d.get(k)
+            if isinstance(v, str) and RE_CODE.match(v):
+                if v not in seen:
+                    seen.add(v)
+                    out.append(v)
+                break
+    return out
+
+
+def _paged(url_of, parse, first_diag=None, max_pages=40):
+    """startIdx 가 '쪽 번호'인지 '건너뛸 개수'인지 확실하지 않아서 두 방식을 모두 시도해 합칩니다."""
+    got, order = {}, []
+    for mode in ('page', 'offset'):
+        for n in range(max_pages):
+            j = http_json(url_of(n if mode == 'page' else n * 100))
+            if first_diag and mode == 'page' and n == 0:
+                first_diag(j)
+            new = [x for x in parse(j) if (x[0] if isinstance(x, tuple) else x) not in got]
             if not new:
                 break
-            for i, n in new:
-                ids[i] = n
-            time.sleep(0.2)
-        if len(ids) < 30:
-            raise RuntimeError(f'테마 목록을 {len(ids)}개밖에 못 읽었어요 (네이버 화면 구조가 바뀌었거나 접속이 막혔을 수 있어요)')
-        print(f'네이버 테마 {len(ids)}개 확인, 종목 가져오는 중...')
+            for x in new:
+                got[x[0] if isinstance(x, tuple) else x] = x
+                order.append(x)
+            time.sleep(0.15)
+    return order
+
+
+def fetch_themes():
+    """{테마이름: [종목코드,...]} - 네이버 증권 테마. 실패하면 저장해 둔 값을 씁니다."""
+    themes = {}
+    try:
+        def diag(j):
+            txt = json.dumps(j, ensure_ascii=False)
+            print(f'[진단] 테마 목록 응답 {len(txt)}자, 앞부분: {txt[:200]}')
+        listed = _paged(lambda n: f'{API}/list?startIdx={n}&pageSize=100&sortType=changeRate',
+                        parse_theme_list, diag)
+        if len(listed) < 30:
+            raise RuntimeError(f'테마 목록을 {len(listed)}개밖에 못 읽었어요 (네이버 데이터 모양이 바뀌었거나 접속이 막혔을 수 있어요)')
+        print(f'네이버 테마 {len(listed)}개 확인, 종목 가져오는 중...')
         fails = 0
-        for k, (i, name) in enumerate(ids.items(), start=1):
+        for tid, name in listed:
             try:
-                codes = parse_theme_stocks(http_get(f'{NAVER}/sise/sise_group_detail.naver?type=theme&no={i}'))
+                codes = _paged(lambda n, tid=tid: f'{API}/{tid}/stocklist?marketType=ALL&orderType=quantTop&startIdx={n}&pageSize=100',
+                               parse_theme_stocks, max_pages=10)
                 if codes:
                     themes[name] = codes
                 else:
                     fails += 1
             except Exception as e:                          # noqa: BLE001
                 fails += 1
-                print(f'  테마 {name}({i}) 실패: {e!r}')
-            time.sleep(0.2)
-        if len(themes) < len(ids) * 0.7:
-            raise RuntimeError(f'테마 종목을 너무 많이 못 읽었어요 ({len(themes)}/{len(ids)})')
+                print(f'  테마 {name}({tid}) 실패: {e!r}')
+            time.sleep(0.1)
+        if len(themes) < len(listed) * 0.7:
+            raise RuntimeError(f'테마 종목을 너무 많이 못 읽었어요 ({len(themes)}/{len(listed)})')
         print(f'테마 {len(themes)}개 / 실패 {fails}개')
         save_json(THEMES_JSON, {'updated_at': datetime.now(KST).isoformat(timespec='seconds'), 'themes': themes})
         return themes, 'live'
