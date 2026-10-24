@@ -111,8 +111,18 @@ RE_CODE = re.compile(r'^[0-9A-Z]{6}$')
 
 def http_json(url):
     r = requests.get(url, headers=API_HEADERS, timeout=20)
-    r.raise_for_status()
-    return json.loads(r.content.decode('utf-8', errors='replace'))
+    if r.status_code >= 400:
+        raise RuntimeError(f'HTTP {r.status_code} {url} -> {r.content[:200].decode("utf-8", "replace")!r}')
+    raw = r.content
+    try:
+        return json.loads(raw.decode('utf-8'))
+    except ValueError:                                       # JSON 이 아니면 HTML 로 보고 글자 그대로 돌려줌
+        for enc in ('utf-8', 'cp949'):
+            try:
+                return {'__html__': raw.decode(enc)}
+            except UnicodeDecodeError:
+                continue
+        return {'__html__': raw.decode('utf-8', 'replace')}
 
 
 def _dicts(obj):
@@ -138,8 +148,17 @@ def parse_theme_list(j):
     return out
 
 
+RE_HTML_CODE = re.compile(r'(?:code=|/domestic/stock/|/item/main\.naver\?code=)([0-9A-Z]{6})\b')
+
+
 def parse_theme_stocks(j):
     seen, out = set(), []
+    if isinstance(j, dict) and '__html__' in j:
+        for m in RE_HTML_CODE.finditer(j['__html__']):
+            if m.group(1) not in seen:
+                seen.add(m.group(1))
+                out.append(m.group(1))
+        return out
     for d in _dicts(j):
         for k in CODE_KEYS:
             v = d.get(k)
@@ -169,6 +188,35 @@ def _paged(url_of, parse, first_diag=None, max_pages=40, size=100):
     return order
 
 
+STOCK_URLS = [   # 네이버 테마 종목 목록 주소 후보 (먼저 되는 것을 씁니다)
+    API + '/{no}/stocklist?marketType=ALL&orderType=quantTop&startIdx={n}&pageSize=20',
+    API + '/{no}/stocklist?marketType=ALL&startIdx={n}&pageSize=20',
+    API + '/{no}/stocklist?startIdx={n}&pageSize=20',
+    API + '/{no}/stocklist?marketType=ALL&orderType=marketSum&startIdx={n}&pageSize=20',
+    API + '/{no}/stocklist?marketType=ALL&orderType=up&startIdx={n}&pageSize=20',
+    API + '/{no}/info?marketType=ALL',
+    'https://finance.naver.com/sise/sise_group_detail.naver?type=theme&no={no}',
+]
+
+
+def pick_stock_url(listed):
+    """첫 테마로 후보 주소를 차례로 시험해서 종목이 나오는 주소를 고릅니다 (결과는 로그에 남겨요)"""
+    tid, name = listed[0]
+    for tpl in STOCK_URLS:
+        url = tpl.format(no=tid, n=0)
+        try:
+            j = http_json(url)
+            codes = parse_theme_stocks(j)
+            snippet = (j.get('__html__', '')[:80] if isinstance(j, dict) and '__html__' in j else json.dumps(j, ensure_ascii=False)[:160])
+            print(f'[진단] 시험 {url} -> 종목 {len(codes)}개 / {snippet!r}')
+            if codes:
+                return tpl
+        except Exception as e:                              # noqa: BLE001
+            print(f'[진단] 시험 {url} -> 실패 {str(e)[:300]}')
+        time.sleep(0.3)
+    raise RuntimeError('테마 종목 주소 후보가 모두 실패했어요 (위 [진단] 줄을 확인해 주세요)')
+
+
 def fetch_themes():
     """{테마이름: [종목코드,...]} - 네이버 증권 테마. 실패하면 저장해 둔 값을 씁니다."""
     themes = {}
@@ -181,10 +229,11 @@ def fetch_themes():
         if len(listed) < 30:
             raise RuntimeError(f'테마 목록을 {len(listed)}개밖에 못 읽었어요 (네이버 데이터 모양이 바뀌었거나 접속이 막혔을 수 있어요)')
         print(f'네이버 테마 {len(listed)}개 확인, 종목 가져오는 중...')
+        tpl = pick_stock_url(listed)
         fails = 0
         for tid, name in listed:
             try:
-                codes = _paged(lambda n, tid=tid: f'{API}/{tid}/stocklist?marketType=ALL&orderType=quantTop&startIdx={n}&pageSize=20',
+                codes = _paged(lambda n, tid=tid: tpl.format(no=tid, n=n),
                                parse_theme_stocks, max_pages=15, size=20)
                 if codes:
                     themes[name] = codes
@@ -192,7 +241,8 @@ def fetch_themes():
                     fails += 1
             except Exception as e:                          # noqa: BLE001
                 fails += 1
-                print(f'  테마 {name}({tid}) 실패: {e!r}')
+                if fails <= 5:
+                    print(f'  테마 {name}({tid}) 실패: {str(e)[:250]}')
             time.sleep(0.1)
         if len(themes) < len(listed) * 0.7:
             raise RuntimeError(f'테마 종목을 너무 많이 못 읽었어요 ({len(themes)}/{len(listed)})')
