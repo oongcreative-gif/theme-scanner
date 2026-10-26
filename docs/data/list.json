@@ -1,6 +1,6 @@
 {
- "updated_at": "2026-10-24T11:38:55+09:00",
- "asof": "2026-10-23",
+ "updated_at": "2026-10-26T19:36:32+09:00",
+ "asof": "2026-10-26",
  "since": "2026-06-01",
  "theme_status": "live",
  "theme_count": 264,
@@ -11,10 +11,49 @@
  },
  "items": [
   {
+   "code": "451760",
+   "name": "컨텍",
+   "market": "KOSDAQ",
+   "marcap": 174322093440,
+   "date": "2026-10-26",
+   "change_pct": 27.8,
+   "amount": 620,
+   "close": 10390.0,
+   "prev_high": 9440.0,
+   "prev_high_date": "2026-10-02",
+   "bottom": 5760.0,
+   "bottom_date": "2026-07-29",
+   "rise_pct": 80.4,
+   "now_close": 10390.0,
+   "since_pct": 0.0,
+   "themes": []
+  },
+  {
+   "code": "328130",
+   "name": "루닛",
+   "market": "KOSDAQ",
+   "marcap": 1093790664200,
+   "date": "2026-10-26",
+   "change_pct": 30.7,
+   "amount": 579,
+   "close": 14690.0,
+   "prev_high": 13310.0,
+   "prev_high_date": "2026-10-20",
+   "bottom": 8180.0,
+   "bottom_date": "2026-09-14",
+   "rise_pct": 79.6,
+   "now_close": 14690.0,
+   "since_pct": 0.0,
+   "themes": [
+    "의료AI",
+    "의료기기"
+   ]
+  },
+  {
    "code": "456160",
    "name": "지투지바이오",
    "market": "KOSDAQ",
-   "marcap": 826482472200,
+   "marcap": 751650055200,
    "date": "2026-10-23",
    "change_pct": 18.8,
    "amount": 667,
@@ -24,8 +63,8 @@
    "bottom": 22400.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 121.4,
-   "now_close": 49600.0,
-   "since_pct": 0.0,
+   "now_close": 45650.0,
+   "since_pct": -8.0,
    "themes": [
     "치매"
    ]
@@ -44,18 +83,18 @@
    "bottom": 38500.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 45.7,
-   "now_close": 59100.0,
-   "since_pct": 5.3,
+   "now_close": 60000.0,
+   "since_pct": 7.0,
    "themes": [
-    "전후 재건(우크라/중동 전쟁 등)",
-    "수자원(양적/질적 개선)"
+    "수자원(양적/질적 개선)",
+    "전후 재건(우크라/중동 전쟁 등)"
    ]
   },
   {
    "code": "065450",
    "name": "빅텍",
    "market": "KOSDAQ",
-   "marcap": 112379009430,
+   "marcap": 90699594225,
    "date": "2026-10-22",
    "change_pct": 17.5,
    "amount": 1170,
@@ -65,8 +104,8 @@
    "bottom": 2500.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 50.4,
-   "now_close": 3635.0,
-   "since_pct": -3.3,
+   "now_close": 2985.0,
+   "since_pct": -20.6,
    "themes": [
     "자전거"
    ]
@@ -75,7 +114,7 @@
    "code": "419050",
    "name": "삼기에너지솔루션즈",
    "market": "KOSDAQ",
-   "marcap": 128977521200,
+   "marcap": 133267239200,
    "date": "2026-10-19",
    "change_pct": 23.3,
    "amount": 1364,
@@ -85,8 +124,8 @@
    "bottom": 865.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 205.8,
-   "now_close": 2240.0,
-   "since_pct": -15.3,
+   "now_close": 2335.0,
+   "since_pct": -11.7,
    "themes": [
     "전기차 화재 방지(배터리 열폭주 등)"
    ]
@@ -95,7 +134,7 @@
    "code": "010580",
    "name": "에스엠벡셀",
    "market": "KOSPI",
-   "marcap": 362124478800,
+   "marcap": 349886785200,
    "date": "2026-10-19",
    "change_pct": 28.3,
    "amount": 997,
@@ -105,15 +144,15 @@
    "bottom": 1321.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 205.8,
-   "now_close": 3230.0,
-   "since_pct": -20.0,
+   "now_close": 3060.0,
+   "since_pct": -24.3,
    "themes": []
   },
   {
    "code": "020150",
    "name": "롯데에너지머티리얼즈",
    "market": "KOSPI",
-   "marcap": 2618273150000,
+   "marcap": 2427139210050,
    "date": "2026-10-19",
    "change_pct": 17.8,
    "amount": 524,
@@ -123,19 +162,19 @@
    "bottom": 22600.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 159.7,
-   "now_close": 49600.0,
-   "since_pct": -15.5,
+   "now_close": 45800.0,
+   "since_pct": -22.0,
    "themes": [
-    "PCB(FPCB 등)",
+    "2차전지(전고체)",
     "2차전지(소재/부품)",
-    "2차전지(전고체)"
+    "PCB(FPCB 등)"
    ]
   },
   {
    "code": "396300",
    "name": "HT로보틱스",
    "market": "KOSDAQ",
-   "marcap": 243968295000,
+   "marcap": 247941720000,
    "date": "2026-10-16",
    "change_pct": 23.5,
    "amount": 2695,
@@ -145,15 +184,15 @@
    "bottom": 2650.0,
    "bottom_date": "2026-07-21",
    "rise_pct": 233.2,
-   "now_close": 9350.0,
-   "since_pct": 5.9,
+   "now_close": 9430.0,
+   "since_pct": 6.8,
    "themes": []
   },
   {
    "code": "010580",
    "name": "에스엠벡셀",
    "market": "KOSPI",
-   "marcap": 362124478800,
+   "marcap": 349886785200,
    "date": "2026-10-15",
    "change_pct": 18.2,
    "amount": 1370,
@@ -163,15 +202,15 @@
    "bottom": 1321.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 138.8,
-   "now_close": 3230.0,
-   "since_pct": 2.4,
+   "now_close": 3060.0,
+   "since_pct": -3.0,
    "themes": []
   },
   {
    "code": "452280",
    "name": "한선엔지니어링",
    "market": "KOSDAQ",
-   "marcap": 292179630600,
+   "marcap": 246177699300,
    "date": "2026-10-14",
    "change_pct": 28.1,
    "amount": 905,
@@ -181,8 +220,8 @@
    "bottom": 8610.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 86.1,
-   "now_close": 14800.0,
-   "since_pct": -7.6,
+   "now_close": 12770.0,
+   "since_pct": -20.3,
    "themes": [
     "피팅(관이음쇠)/밸브"
    ]
@@ -191,7 +230,7 @@
    "code": "005160",
    "name": "동국산업",
    "market": "KOSDAQ",
-   "marcap": 200162138580,
+   "marcap": 195822580020,
    "date": "2026-10-08",
    "change_pct": 20.2,
    "amount": 1030,
@@ -201,8 +240,8 @@
    "bottom": 2185.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 112.1,
-   "now_close": 3710.0,
-   "since_pct": -20.0,
+   "now_close": 3545.0,
+   "since_pct": -23.5,
    "themes": [
     "철강 중소형"
    ]
@@ -211,7 +250,7 @@
    "code": "033790",
    "name": "피노",
    "market": "KOSDAQ",
-   "marcap": 591769116640,
+   "marcap": 617573002540,
    "date": "2026-10-08",
    "change_pct": 17.3,
    "amount": 736,
@@ -221,8 +260,8 @@
    "bottom": 4265.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 169.6,
-   "now_close": 6880.0,
-   "since_pct": -40.2,
+   "now_close": 7180.0,
+   "since_pct": -37.6,
    "themes": [
     "통신장비"
    ]
@@ -231,7 +270,7 @@
    "code": "419050",
    "name": "삼기에너지솔루션즈",
    "market": "KOSDAQ",
-   "marcap": 128977521200,
+   "marcap": 133267239200,
    "date": "2026-10-08",
    "change_pct": 30.6,
    "amount": 534,
@@ -241,8 +280,8 @@
    "bottom": 865.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 166.5,
-   "now_close": 2240.0,
-   "since_pct": -2.8,
+   "now_close": 2335.0,
+   "since_pct": 1.3,
    "themes": [
     "전기차 화재 방지(배터리 열폭주 등)"
    ]
@@ -251,7 +290,7 @@
    "code": "142280",
    "name": "녹십자엠에스",
    "market": "KOSDAQ",
-   "marcap": 83870608500,
+   "marcap": 77879850750,
    "date": "2026-10-07",
    "change_pct": 28.6,
    "amount": 871,
@@ -261,15 +300,15 @@
    "bottom": 2200.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 95.5,
-   "now_close": 3475.0,
-   "since_pct": -19.2,
+   "now_close": 3235.0,
+   "since_pct": -24.8,
    "themes": []
   },
   {
    "code": "036930",
    "name": "주성엔지니어링",
    "market": "KOSDAQ GLOBAL",
-   "marcap": 8361953667900,
+   "marcap": 7790235879600,
    "date": "2026-10-06",
    "change_pct": 18.2,
    "amount": 9549,
@@ -279,21 +318,21 @@
    "bottom": 96800.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 192.4,
-   "now_close": 179200.0,
-   "since_pct": -36.7,
+   "now_close": 168200.0,
+   "since_pct": -40.6,
    "themes": [
-    "반도체 장비",
-    "플렉서블 디스플레이",
     "OLED(유기 발광 다이오드)",
+    "플렉서블 디스플레이",
     "태양광에너지",
-    "LED장비"
+    "LED장비",
+    "반도체 장비"
    ]
   },
   {
    "code": "069540",
    "name": "빛과전자",
    "market": "KOSDAQ",
-   "marcap": 380898611860,
+   "marcap": 364558286795,
    "date": "2026-10-06",
    "change_pct": 16.8,
    "amount": 1630,
@@ -303,8 +342,8 @@
    "bottom": 1643.0,
    "bottom_date": "2026-07-09",
    "rise_pct": 212.8,
-   "now_close": 3375.0,
-   "since_pct": -34.3,
+   "now_close": 3220.0,
+   "since_pct": -37.4,
    "themes": [
     "통신장비",
     "광통신(광케이블/광섬유 등)"
@@ -314,7 +353,7 @@
    "code": "158430",
    "name": "아톤",
    "market": "KOSDAQ",
-   "marcap": 122410460000,
+   "marcap": 121308765860,
    "date": "2026-10-06",
    "change_pct": 25.7,
    "amount": 1320,
@@ -324,18 +363,18 @@
    "bottom": 3300.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 116.7,
-   "now_close": 4950.0,
-   "since_pct": -30.8,
+   "now_close": 4965.0,
+   "since_pct": -30.6,
    "themes": [
-    "NFT(대체불가토큰)",
-    "마이데이터"
+    "마이데이터",
+    "NFT(대체불가토큰)"
    ]
   },
   {
    "code": "042510",
    "name": "라온시큐어",
    "market": "KOSDAQ",
-   "marcap": 187688493200,
+   "marcap": 191131299880,
    "date": "2026-10-06",
    "change_pct": 25.8,
    "amount": 815,
@@ -345,12 +384,12 @@
    "bottom": 6320.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 135.3,
-   "now_close": 16800.0,
-   "since_pct": 13.0,
+   "now_close": 17280.0,
+   "since_pct": 16.2,
    "themes": [
+    "딥페이크(deepfake)",
     "보안주(정보)",
     "바이오인식(생체인식)",
-    "딥페이크(deepfake)",
     "양자암호/양자컴퓨팅"
    ]
   },
@@ -358,7 +397,7 @@
    "code": "411080",
    "name": "샌즈랩",
    "market": "KOSDAQ",
-   "marcap": 92979915420,
+   "marcap": 101071763560,
    "date": "2026-10-06",
    "change_pct": 30.0,
    "amount": 585,
@@ -368,8 +407,8 @@
    "bottom": 2965.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 202.5,
-   "now_close": 6090.0,
-   "since_pct": -32.1,
+   "now_close": 6940.0,
+   "since_pct": -22.6,
    "themes": [
     "딥페이크(deepfake)"
    ]
@@ -378,7 +417,7 @@
    "code": "115500",
    "name": "케이씨에스",
    "market": "KOSDAQ",
-   "marcap": 107400000000,
+   "marcap": 105480000000,
    "date": "2026-10-06",
    "change_pct": 17.2,
    "amount": 513,
@@ -388,18 +427,18 @@
    "bottom": 6120.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 108.5,
-   "now_close": 8660.0,
-   "since_pct": -32.1,
+   "now_close": 8780.0,
+   "since_pct": -31.2,
    "themes": [
-    "화폐/금융자동화기기(디지털화폐 등)",
-    "키오스크(KIOSK)"
+    "키오스크(KIOSK)",
+    "화폐/금융자동화기기(디지털화폐 등)"
    ]
   },
   {
    "code": "478340",
    "name": "나라스페이스테크놀로지",
    "market": "KOSDAQ",
-   "marcap": 116104150000,
+   "marcap": 111227775700,
    "date": "2026-10-02",
    "change_pct": 19.2,
    "amount": 1567,
@@ -409,15 +448,15 @@
    "bottom": 7520.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 127.3,
-   "now_close": 9970.0,
-   "since_pct": -41.7,
+   "now_close": 10020.0,
+   "since_pct": -41.4,
    "themes": []
   },
   {
    "code": "217590",
    "name": "티엠씨",
    "market": "KOSPI",
-   "marcap": 272505684750,
+   "marcap": 259976687750,
    "date": "2026-10-02",
    "change_pct": 29.7,
    "amount": 995,
@@ -427,8 +466,8 @@
    "bottom": 8820.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 109.1,
-   "now_close": 11050.0,
-   "since_pct": -40.1,
+   "now_close": 10760.0,
+   "since_pct": -41.6,
    "themes": [
     "광통신(광케이블/광섬유 등)"
    ]
@@ -437,7 +476,7 @@
    "code": "020150",
    "name": "롯데에너지머티리얼즈",
    "market": "KOSPI",
-   "marcap": 2618273150000,
+   "marcap": 2427139210050,
    "date": "2026-10-02",
    "change_pct": 19.5,
    "amount": 682,
@@ -447,19 +486,19 @@
    "bottom": 22600.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 126.1,
-   "now_close": 49600.0,
-   "since_pct": -2.9,
+   "now_close": 45800.0,
+   "since_pct": -10.4,
    "themes": [
-    "PCB(FPCB 등)",
+    "2차전지(전고체)",
     "2차전지(소재/부품)",
-    "2차전지(전고체)"
+    "PCB(FPCB 등)"
    ]
   },
   {
    "code": "052260",
    "name": "현대바이오랜드",
    "market": "KOSDAQ",
-   "marcap": 129750000000,
+   "marcap": 124650000000,
    "date": "2026-09-29",
    "change_pct": 25.0,
    "amount": 801,
@@ -469,8 +508,8 @@
    "bottom": 3125.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 81.4,
-   "now_close": 4280.0,
-   "since_pct": -24.5,
+   "now_close": 4160.0,
+   "since_pct": -26.6,
    "themes": [
     "치아 치료(임플란트 등)"
    ]
@@ -479,7 +518,7 @@
    "code": "047920",
    "name": "HLB제약",
    "market": "KOSDAQ",
-   "marcap": 448685386400,
+   "marcap": 423855224240,
    "date": "2026-09-29",
    "change_pct": 29.9,
    "amount": 524,
@@ -489,10 +528,9 @@
    "bottom": 5528.0,
    "bottom_date": "2026-07-13",
    "rise_pct": 126.1,
-   "now_close": 10480.0,
-   "since_pct": -16.2,
+   "now_close": 9670.0,
+   "since_pct": -22.6,
    "themes": [
-    "고령화 사회(노인복지)",
     "건강기능식품"
    ]
   },
@@ -500,7 +538,7 @@
    "code": "303810",
    "name": "동국생명과학",
    "market": "KOSDAQ",
-   "marcap": 74523046200,
+   "marcap": 72923839200,
    "date": "2026-09-28",
    "change_pct": 19.9,
    "amount": 1079,
@@ -518,7 +556,7 @@
    "code": "256840",
    "name": "한국비엔씨",
    "market": "KOSDAQ",
-   "marcap": 175090908160,
+   "marcap": 169277342850,
    "date": "2026-09-28",
    "change_pct": 29.2,
    "amount": 646,
@@ -528,8 +566,8 @@
    "bottom": 2050.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 67.1,
-   "now_close": 2545.0,
-   "since_pct": -25.7,
+   "now_close": 2435.0,
+   "since_pct": -28.9,
    "themes": [
     "보톡스(보툴리눔톡신)"
    ]
@@ -538,7 +576,7 @@
    "code": "456010",
    "name": "아이씨티케이",
    "market": "KOSDAQ",
-   "marcap": 252445176750,
+   "marcap": 244542545130,
    "date": "2026-09-28",
    "change_pct": 15.1,
    "amount": 610,
@@ -548,11 +586,11 @@
    "bottom": 11000.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 139.5,
-   "now_close": 17230.0,
-   "since_pct": -34.6,
+   "now_close": 16560.0,
+   "since_pct": -37.2,
    "themes": [
-    "보안주(정보)",
     "딥페이크(deepfake)",
+    "보안주(정보)",
     "양자암호/양자컴퓨팅"
    ]
   },
@@ -560,7 +598,7 @@
    "code": "115440",
    "name": "우리넷",
    "market": "KOSDAQ",
-   "marcap": 93910340400,
+   "marcap": 90995881560,
    "date": "2026-09-23",
    "change_pct": 22.4,
    "amount": 812,
@@ -570,15 +608,15 @@
    "bottom": 5290.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 129.1,
-   "now_close": 8490.0,
-   "since_pct": -30.0,
+   "now_close": 8340.0,
+   "since_pct": -31.2,
    "themes": []
   },
   {
    "code": "012210",
    "name": "삼미금속",
    "market": "KOSDAQ",
-   "marcap": 193863779390,
+   "marcap": 186256758320,
    "date": "2026-09-22",
    "change_pct": 20.4,
    "amount": 2963,
@@ -588,8 +626,8 @@
    "bottom": 4020.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 231.6,
-   "now_close": 8240.0,
-   "since_pct": -38.2,
+   "now_close": 8000.0,
+   "since_pct": -40.0,
    "themes": [
     "건설기계"
    ]
@@ -598,7 +636,7 @@
    "code": "036540",
    "name": "SFA반도체",
    "market": "KOSDAQ",
-   "marcap": 1437383048220,
+   "marcap": 1337062263390,
    "date": "2026-09-21",
    "change_pct": 18.0,
    "amount": 2837,
@@ -608,15 +646,15 @@
    "bottom": 3735.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 184.1,
-   "now_close": 8580.0,
-   "since_pct": -19.1,
+   "now_close": 8060.0,
+   "since_pct": -24.0,
    "themes": []
   },
   {
    "code": "950260",
    "name": "인제니아테라퓨틱스(Reg.S)",
    "market": "KOSDAQ",
-   "marcap": 1070475741550,
+   "marcap": 1147114882400,
    "date": "2026-09-21",
    "change_pct": 19.2,
    "amount": 1489,
@@ -626,8 +664,8 @@
    "bottom": 9900.0,
    "bottom_date": "2026-08-18",
    "rise_pct": 120.7,
-   "now_close": 21600.0,
-   "since_pct": -1.1,
+   "now_close": 23400.0,
+   "since_pct": 7.1,
    "themes": [
     "2026 하반기 신규상장"
    ]
@@ -636,7 +674,7 @@
    "code": "201490",
    "name": "미투온",
    "market": "KOSDAQ",
-   "marcap": 89335771980,
+   "marcap": 88190441570,
    "date": "2026-09-17",
    "change_pct": 18.5,
    "amount": 3377,
@@ -646,10 +684,9 @@
    "bottom": 1738.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 161.8,
-   "now_close": 2735.0,
-   "since_pct": -39.9,
+   "now_close": 2655.0,
+   "since_pct": -41.6,
    "themes": [
-    "NFT(대체불가토큰)",
     "웹툰"
    ]
   },
@@ -657,7 +694,7 @@
    "code": "072950",
    "name": "빛샘전자",
    "market": "KOSDAQ",
-   "marcap": 107019186900,
+   "marcap": 102751303600,
    "date": "2026-09-16",
    "change_pct": 29.5,
    "amount": 1922,
@@ -667,15 +704,15 @@
    "bottom": 5750.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 141.9,
-   "now_close": 13150.0,
-   "since_pct": -5.5,
+   "now_close": 12690.0,
+   "since_pct": -8.8,
    "themes": []
   },
   {
    "code": "014950",
    "name": "삼익제약",
    "market": "KOSDAQ",
-   "marcap": 74345523560,
+   "marcap": 72227130080,
    "date": "2026-09-15",
    "change_pct": 20.5,
    "amount": 2359,
@@ -685,15 +722,15 @@
    "bottom": 3705.0,
    "bottom_date": "2026-07-14",
    "rise_pct": 208.2,
-   "now_close": 7310.0,
-   "since_pct": -36.0,
+   "now_close": 7090.0,
+   "since_pct": -37.9,
    "themes": []
   },
   {
    "code": "036540",
    "name": "SFA반도체",
    "market": "KOSDAQ",
-   "marcap": 1437383048220,
+   "marcap": 1337062263390,
    "date": "2026-09-15",
    "change_pct": 16.0,
    "amount": 1481,
@@ -703,15 +740,15 @@
    "bottom": 3735.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 131.6,
-   "now_close": 8580.0,
-   "since_pct": -0.8,
+   "now_close": 8060.0,
+   "since_pct": -6.8,
    "themes": []
   },
   {
    "code": "201490",
    "name": "미투온",
    "market": "KOSDAQ",
-   "marcap": 89335771980,
+   "marcap": 88190441570,
    "date": "2026-09-15",
    "change_pct": 34.1,
    "amount": 846,
@@ -721,10 +758,9 @@
    "bottom": 1738.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 131.9,
-   "now_close": 2735.0,
-   "since_pct": -32.1,
+   "now_close": 2655.0,
+   "since_pct": -34.1,
    "themes": [
-    "NFT(대체불가토큰)",
     "웹툰"
    ]
   },
@@ -732,7 +768,7 @@
    "code": "158430",
    "name": "아톤",
    "market": "KOSDAQ",
-   "marcap": 122410460000,
+   "marcap": 121308765860,
    "date": "2026-09-15",
    "change_pct": 28.8,
    "amount": 688,
@@ -742,18 +778,18 @@
    "bottom": 3300.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 91.2,
-   "now_close": 4950.0,
-   "since_pct": -21.6,
+   "now_close": 4965.0,
+   "since_pct": -21.3,
    "themes": [
-    "NFT(대체불가토큰)",
-    "마이데이터"
+    "마이데이터",
+    "NFT(대체불가토큰)"
    ]
   },
   {
    "code": "411080",
    "name": "샌즈랩",
    "market": "KOSDAQ",
-   "marcap": 92979915420,
+   "marcap": 101071763560,
    "date": "2026-09-14",
    "change_pct": 29.9,
    "amount": 867,
@@ -763,8 +799,8 @@
    "bottom": 2965.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 141.5,
-   "now_close": 6090.0,
-   "since_pct": -14.9,
+   "now_close": 6940.0,
+   "since_pct": -3.1,
    "themes": [
     "딥페이크(deepfake)"
    ]
@@ -773,7 +809,7 @@
    "code": "042510",
    "name": "라온시큐어",
    "market": "KOSDAQ",
-   "marcap": 187688493200,
+   "marcap": 191131299880,
    "date": "2026-09-14",
    "change_pct": 23.3,
    "amount": 607,
@@ -783,12 +819,12 @@
    "bottom": 6320.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 83.1,
-   "now_close": 16800.0,
-   "since_pct": 45.2,
+   "now_close": 17280.0,
+   "since_pct": 49.4,
    "themes": [
+    "딥페이크(deepfake)",
     "보안주(정보)",
     "바이오인식(생체인식)",
-    "딥페이크(deepfake)",
     "양자암호/양자컴퓨팅"
    ]
   },
@@ -796,7 +832,7 @@
    "code": "0015N0",
    "name": "아로마티카",
    "market": "KOSDAQ",
-   "marcap": 106526529340,
+   "marcap": 109167682960,
    "date": "2026-09-14",
    "change_pct": 16.3,
    "amount": 566,
@@ -806,15 +842,15 @@
    "bottom": 4500.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 173.8,
-   "now_close": 8410.0,
-   "since_pct": -31.7,
+   "now_close": 8590.0,
+   "since_pct": -30.3,
    "themes": []
   },
   {
    "code": "003350",
    "name": "한국화장품제조",
    "market": "KOSPI",
-   "marcap": 329703000000,
+   "marcap": 328796600000,
    "date": "2026-09-11",
    "change_pct": 19.4,
    "amount": 1791,
@@ -824,15 +860,15 @@
    "bottom": 6750.0,
    "bottom_date": "2026-06-26",
    "rise_pct": 132.7,
-   "now_close": 14450.0,
-   "since_pct": -8.0,
+   "now_close": 14280.0,
+   "since_pct": -9.1,
    "themes": []
   },
   {
    "code": "012210",
    "name": "삼미금속",
    "market": "KOSDAQ",
-   "marcap": 193863779390,
+   "marcap": 186256758320,
    "date": "2026-09-09",
    "change_pct": 29.9,
    "amount": 2357,
@@ -842,8 +878,8 @@
    "bottom": 4020.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 224.1,
-   "now_close": 8240.0,
-   "since_pct": -36.8,
+   "now_close": 8000.0,
+   "since_pct": -38.6,
    "themes": [
     "건설기계"
    ]
@@ -852,7 +888,7 @@
    "code": "053260",
    "name": "금강철강",
    "market": "KOSDAQ",
-   "marcap": 107078400000,
+   "marcap": 104083200000,
    "date": "2026-09-09",
    "change_pct": 20.0,
    "amount": 1318,
@@ -862,15 +898,15 @@
    "bottom": 4050.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 97.3,
-   "now_close": 5600.0,
-   "since_pct": -29.9,
+   "now_close": 5490.0,
+   "since_pct": -31.3,
    "themes": []
   },
   {
    "code": "004310",
    "name": "현대약품",
    "market": "KOSPI",
-   "marcap": 217280000000,
+   "marcap": 214400000000,
    "date": "2026-09-08",
    "change_pct": 24.0,
    "amount": 3182,
@@ -880,8 +916,8 @@
    "bottom": 4400.0,
    "bottom_date": "2026-07-09",
    "rise_pct": 137.3,
-   "now_close": 6700.0,
-   "since_pct": -35.8,
+   "now_close": 6580.0,
+   "since_pct": -37.0,
    "themes": [
     "탈모 치료"
    ]
@@ -890,7 +926,7 @@
    "code": "162300",
    "name": "신스틸",
    "market": "KOSDAQ",
-   "marcap": 77717369868,
+   "marcap": 76763528082,
    "date": "2026-09-08",
    "change_pct": 16.2,
    "amount": 651,
@@ -900,15 +936,15 @@
    "bottom": 1335.0,
    "bottom_date": "2026-07-21",
    "rise_pct": 85.0,
-   "now_close": 1846.0,
-   "since_pct": -25.3,
+   "now_close": 1852.0,
+   "since_pct": -25.0,
    "themes": []
   },
   {
    "code": "032940",
    "name": "원익",
    "market": "KOSDAQ",
-   "marcap": 122803971750,
+   "marcap": 127534198810,
    "date": "2026-09-04",
    "change_pct": 17.1,
    "amount": 1454,
@@ -918,15 +954,15 @@
    "bottom": 4215.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 138.4,
-   "now_close": 6680.0,
-   "since_pct": -33.5,
+   "now_close": 6840.0,
+   "since_pct": -31.9,
    "themes": []
   },
   {
    "code": "234690",
    "name": "녹십자웰빙",
    "market": "KOSDAQ",
-   "marcap": 201727746700,
+   "marcap": 195260962300,
    "date": "2026-09-03",
    "change_pct": 16.5,
    "amount": 1122,
@@ -936,15 +972,15 @@
    "bottom": 6680.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 60.9,
-   "now_close": 11340.0,
-   "since_pct": 5.5,
+   "now_close": 10830.0,
+   "since_pct": 0.7,
    "themes": []
   },
   {
    "code": "064550",
    "name": "바이오니아",
    "market": "KOSDAQ",
-   "marcap": 187124609750,
+   "marcap": 180930139910,
    "date": "2026-09-01",
    "change_pct": 25.1,
    "amount": 569,
@@ -954,8 +990,8 @@
    "bottom": 5470.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 101.1,
-   "now_close": 7140.0,
-   "since_pct": -35.1,
+   "now_close": 6990.0,
+   "since_pct": -36.5,
    "themes": [
     "탈모 치료"
    ]
@@ -964,7 +1000,7 @@
    "code": "001210",
    "name": "금호전기",
    "market": "KOSPI",
-   "marcap": 100255196060,
+   "marcap": 94952024480,
    "date": "2026-08-31",
    "change_pct": 16.9,
    "amount": 3388,
@@ -974,15 +1010,15 @@
    "bottom": 2325.0,
    "bottom_date": "2026-06-02",
    "rise_pct": 436.8,
-   "now_close": 7920.0,
-   "since_pct": -36.5,
+   "now_close": 7520.0,
+   "since_pct": -39.7,
    "themes": []
   },
   {
    "code": "001210",
    "name": "금호전기",
    "market": "KOSPI",
-   "marcap": 100255196060,
+   "marcap": 94952024480,
    "date": "2026-08-28",
    "change_pct": 29.9,
    "amount": 2536,
@@ -992,15 +1028,15 @@
    "bottom": 2325.0,
    "bottom_date": "2026-06-02",
    "rise_pct": 359.4,
-   "now_close": 7920.0,
-   "since_pct": -25.8,
+   "now_close": 7520.0,
+   "since_pct": -29.6,
    "themes": []
   },
   {
    "code": "041190",
    "name": "우리기술투자",
    "market": "KOSDAQ",
-   "marcap": 376257000000,
+   "marcap": 364686000000,
    "date": "2026-08-25",
    "change_pct": 15.8,
    "amount": 2724,
@@ -1010,19 +1046,19 @@
    "bottom": 3725.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 82.6,
-   "now_close": 4675.0,
-   "since_pct": -31.2,
+   "now_close": 4560.0,
+   "since_pct": -32.9,
    "themes": [
-    "두나무(Dunamu)",
     "창투사",
-    "가상화폐(비트코인 등)"
+    "가상화폐(비트코인 등)",
+    "두나무(Dunamu)"
    ]
   },
   {
    "code": "003350",
    "name": "한국화장품제조",
    "market": "KOSPI",
-   "marcap": 329703000000,
+   "marcap": 328796600000,
    "date": "2026-08-25",
    "change_pct": 23.0,
    "amount": 1219,
@@ -1032,15 +1068,15 @@
    "bottom": 6750.0,
    "bottom_date": "2026-06-26",
    "rise_pct": 113.5,
-   "now_close": 14450.0,
-   "since_pct": 0.3,
+   "now_close": 14280.0,
+   "since_pct": -0.9,
    "themes": []
   },
   {
    "code": "008930",
    "name": "한미사이언스",
    "market": "KOSPI",
-   "marcap": 2845088480000,
+   "marcap": 2889542987500,
    "date": "2026-08-24",
    "change_pct": 25.7,
    "amount": 2182,
@@ -1050,8 +1086,8 @@
    "bottom": 25600.0,
    "bottom_date": "2026-06-26",
    "rise_pct": 120.7,
-   "now_close": 40950.0,
-   "since_pct": -27.5,
+   "now_close": 41800.0,
+   "since_pct": -26.0,
    "themes": [
     "mRNA(메신저 리보핵산)"
    ]
@@ -1060,7 +1096,7 @@
    "code": "005180",
    "name": "빙그레",
    "market": "KOSPI",
-   "marcap": 664903435200,
+   "marcap": 649872373500,
    "date": "2026-08-14",
    "change_pct": 19.9,
    "amount": 821,
@@ -1070,8 +1106,8 @@
    "bottom": 61500.0,
    "bottom_date": "2026-06-23",
    "rise_pct": 34.0,
-   "now_close": 75300.0,
-   "since_pct": -8.6,
+   "now_close": 72900.0,
+   "since_pct": -11.5,
    "themes": [
     "여름"
    ]
@@ -1080,7 +1116,7 @@
    "code": "459550",
    "name": "알트",
    "market": "KOSDAQ",
-   "marcap": 37175401714,
+   "marcap": 40630645971,
    "date": "2026-08-14",
    "change_pct": 30.0,
    "amount": 569,
@@ -1090,15 +1126,15 @@
    "bottom": 992.0,
    "bottom_date": "2026-07-21",
    "rise_pct": 159.6,
-   "now_close": 1440.0,
-   "since_pct": -44.1,
+   "now_close": 1618.0,
+   "since_pct": -37.2,
    "themes": []
   },
   {
    "code": "007340",
    "name": "DN오토모티브",
    "market": "KOSPI",
-   "marcap": 2401871008250,
+   "marcap": 2308253624250,
    "date": "2026-08-14",
    "change_pct": 19.1,
    "amount": 508,
@@ -1108,8 +1144,8 @@
    "bottom": 32200.0,
    "bottom_date": "2026-07-09",
    "rise_pct": 82.9,
-   "now_close": 40350.0,
-   "since_pct": -31.5,
+   "now_close": 39750.0,
+   "since_pct": -32.5,
    "themes": [
     "자동차부품"
    ]
@@ -1118,7 +1154,7 @@
    "code": "161890",
    "name": "한국콜마",
    "market": "KOSPI",
-   "marcap": 2891621932500,
+   "marcap": 2771236039800,
    "date": "2026-08-12",
    "change_pct": 22.8,
    "amount": 3189,
@@ -1128,8 +1164,8 @@
    "bottom": 76100.0,
    "bottom_date": "2026-06-09",
    "rise_pct": 74.1,
-   "now_close": 121900.0,
-   "since_pct": -8.0,
+   "now_close": 117100.0,
+   "since_pct": -11.6,
    "themes": [
     "화장품"
    ]
@@ -1138,7 +1174,7 @@
    "code": "192820",
    "name": "코스맥스",
    "market": "KOSPI",
-   "marcap": 3092741202500,
+   "marcap": 3041668412000,
    "date": "2026-08-12",
    "change_pct": 18.8,
    "amount": 1456,
@@ -1148,8 +1184,8 @@
    "bottom": 141000.0,
    "bottom_date": "2026-06-26",
    "rise_pct": 77.0,
-   "now_close": 271500.0,
-   "since_pct": 8.8,
+   "now_close": 265500.0,
+   "since_pct": 6.4,
    "themes": [
     "화장품"
    ]
@@ -1158,7 +1194,7 @@
    "code": "226340",
    "name": "본느",
    "market": "KOSDAQ",
-   "marcap": 39099655440,
+   "marcap": 37757178000,
    "date": "2026-08-11",
    "change_pct": 30.0,
    "amount": 1113,
@@ -1168,15 +1204,15 @@
    "bottom": 1220.0,
    "bottom_date": "2026-07-30",
    "rise_pct": 560.7,
-   "now_close": 4640.0,
-   "since_pct": -42.4,
+   "now_close": 4490.0,
+   "since_pct": -44.3,
    "themes": []
   },
   {
    "code": "241710",
    "name": "코스메카코리아",
    "market": "KOSDAQ GLOBAL",
-   "marcap": 1113924000000,
+   "marcap": 1091496000000,
    "date": "2026-08-11",
    "change_pct": 15.2,
    "amount": 878,
@@ -1186,15 +1222,15 @@
    "bottom": 62900.0,
    "bottom_date": "2026-06-22",
    "rise_pct": 73.9,
-   "now_close": 105700.0,
-   "since_pct": -3.4,
+   "now_close": 102200.0,
+   "since_pct": -6.6,
    "themes": []
   },
   {
    "code": "003010",
    "name": "혜인",
    "market": "KOSPI",
-   "marcap": 125474812890,
+   "marcap": 98778044190,
    "date": "2026-08-11",
    "change_pct": 19.4,
    "amount": 731,
@@ -1204,8 +1240,8 @@
    "bottom": 3925.0,
    "bottom_date": "2026-07-29",
    "rise_pct": 80.4,
-   "now_close": 9810.0,
-   "since_pct": 38.6,
+   "now_close": 7710.0,
+   "since_pct": 8.9,
    "themes": [
     "건설기계"
    ]
@@ -1214,7 +1250,7 @@
    "code": "475150",
    "name": "SK이터닉스",
    "market": "KOSPI",
-   "marcap": 1374603611400,
+   "marcap": 1304766253200,
    "date": "2026-07-23",
    "change_pct": 30.0,
    "amount": 13683,
@@ -1224,8 +1260,8 @@
    "bottom": 30100.0,
    "bottom_date": "2026-06-08",
    "rise_pct": 167.8,
-   "now_close": 39950.0,
-   "since_pct": -50.4,
+   "now_close": 38200.0,
+   "since_pct": -52.6,
    "themes": [
     "전력저장장치(ESS)",
     "고체산화물 연료전지(SOFC)"
@@ -1235,7 +1271,7 @@
    "code": "119850",
    "name": "지엔씨에너지",
    "market": "KOSDAQ",
-   "marcap": 667003259950,
+   "marcap": 594628060350,
    "date": "2026-07-23",
    "change_pct": 30.0,
    "amount": 1227,
@@ -1245,8 +1281,8 @@
    "bottom": 18350.0,
    "bottom_date": "2026-06-08",
    "rise_pct": 148.2,
-   "now_close": 39950.0,
-   "since_pct": -12.3,
+   "now_close": 36000.0,
+   "since_pct": -21.0,
    "themes": [
     "남북경협"
    ]
@@ -1255,7 +1291,7 @@
    "code": "003680",
    "name": "한성기업",
    "market": "KOSPI",
-   "marcap": 25272726050,
+   "marcap": 24869107575,
    "date": "2026-07-15",
    "change_pct": 30.0,
    "amount": 785,
@@ -1265,18 +1301,18 @@
    "bottom": 3915.0,
    "bottom_date": "2026-06-26",
    "rise_pct": 270.9,
-   "now_close": 4030.0,
-   "since_pct": -72.2,
+   "now_close": 4020.0,
+   "since_pct": -72.3,
    "themes": [
-    "수산",
-    "김밥(냉동김밥 등)"
+    "김밥(냉동김밥 등)",
+    "수산"
    ]
   },
   {
    "code": "003680",
    "name": "한성기업",
    "market": "KOSPI",
-   "marcap": 25272726050,
+   "marcap": 24869107575,
    "date": "2026-07-14",
    "change_pct": 20.1,
    "amount": 1023,
@@ -1286,18 +1322,18 @@
    "bottom": 3915.0,
    "bottom_date": "2026-06-26",
    "rise_pct": 185.3,
-   "now_close": 4030.0,
-   "since_pct": -63.9,
+   "now_close": 4020.0,
+   "since_pct": -64.0,
    "themes": [
-    "수산",
-    "김밥(냉동김밥 등)"
+    "김밥(냉동김밥 등)",
+    "수산"
    ]
   },
   {
    "code": "073240",
    "name": "금호타이어",
    "market": "KOSPI",
-   "marcap": 1508116506750,
+   "marcap": 1465027463700,
    "date": "2026-07-10",
    "change_pct": 30.0,
    "amount": 1711,
@@ -1307,8 +1343,8 @@
    "bottom": 4220.0,
    "bottom_date": "2026-06-24",
    "rise_pct": 84.8,
-   "now_close": 5240.0,
-   "since_pct": -32.8,
+   "now_close": 5160.0,
+   "since_pct": -33.8,
    "themes": [
     "타이어"
    ]
@@ -1317,7 +1353,7 @@
    "code": "058730",
    "name": "다스코",
    "market": "KOSPI",
-   "marcap": 57412296585,
+   "marcap": 55387171485,
    "date": "2026-07-08",
    "change_pct": 30.0,
    "amount": 1451,
@@ -1327,15 +1363,15 @@
    "bottom": 2270.0,
    "bottom_date": "2026-06-08",
    "rise_pct": 129.1,
-   "now_close": 2805.0,
-   "since_pct": -46.1,
+   "now_close": 2725.0,
+   "since_pct": -47.6,
    "themes": []
   },
   {
    "code": "019210",
    "name": "와이지-원",
    "market": "KOSDAQ",
-   "marcap": 394997391360,
+   "marcap": 383095398400,
    "date": "2026-07-06",
    "change_pct": 18.1,
    "amount": 806,
@@ -1345,8 +1381,8 @@
    "bottom": 11820.0,
    "bottom_date": "2026-04-09",
    "rise_pct": 125.9,
-   "now_close": 10490.0,
-   "since_pct": -60.7,
+   "now_close": 10160.0,
+   "since_pct": -61.9,
    "themes": [
     "공작기계"
    ]
@@ -1355,7 +1391,7 @@
    "code": "002990",
    "name": "금호건설",
    "market": "KOSPI",
-   "marcap": 353969753000,
+   "marcap": 340556162360,
    "date": "2026-07-01",
    "change_pct": 29.9,
    "amount": 616,
@@ -1365,19 +1401,19 @@
    "bottom": 3530.0,
    "bottom_date": "2026-06-02",
    "rise_pct": 311.9,
-   "now_close": 9440.0,
-   "since_pct": -35.1,
+   "now_close": 9040.0,
+   "since_pct": -37.8,
    "themes": [
     "건설 중소형",
-    "수자원(양적/질적 개선)",
-    "GTX(수도권 광역급행철도)"
+    "GTX(수도권 광역급행철도)",
+    "수자원(양적/질적 개선)"
    ]
   },
   {
    "code": "023410",
    "name": "유진기업",
    "market": "KOSDAQ",
-   "marcap": 239663675300,
+   "marcap": 239277120985,
    "date": "2026-07-01",
    "change_pct": 29.9,
    "amount": 539,
@@ -1387,19 +1423,19 @@
    "bottom": 3180.0,
    "bottom_date": "2026-06-24",
    "rise_pct": 42.0,
-   "now_close": 3075.0,
-   "since_pct": -31.9,
+   "now_close": 3085.0,
+   "since_pct": -31.7,
    "themes": [
-    "아스콘(아스팔트 콘크리트)",
     "시멘트/레미콘",
-    "GTX(수도권 광역급행철도)"
+    "GTX(수도권 광역급행철도)",
+    "아스콘(아스팔트 콘크리트)"
    ]
   },
   {
    "code": "002990",
    "name": "금호건설",
    "market": "KOSPI",
-   "marcap": 353969753000,
+   "marcap": 340556162360,
    "date": "2026-06-30",
    "change_pct": 30.0,
    "amount": 3168,
@@ -1409,19 +1445,19 @@
    "bottom": 3530.0,
    "bottom_date": "2026-06-02",
    "rise_pct": 217.0,
-   "now_close": 9440.0,
-   "since_pct": -15.6,
+   "now_close": 9040.0,
+   "since_pct": -19.2,
    "themes": [
     "건설 중소형",
-    "수자원(양적/질적 개선)",
-    "GTX(수도권 광역급행철도)"
+    "GTX(수도권 광역급행철도)",
+    "수자원(양적/질적 개선)"
    ]
   },
   {
    "code": "222800",
    "name": "심텍",
    "market": "KOSDAQ GLOBAL",
-   "marcap": 4367993701000,
+   "marcap": 4174189213900,
    "date": "2026-06-30",
    "change_pct": 19.6,
    "amount": 1852,
@@ -1431,20 +1467,20 @@
    "bottom": 47050.0,
    "bottom_date": "2026-03-31",
    "rise_pct": 216.0,
-   "now_close": 111400.0,
-   "since_pct": -25.1,
+   "now_close": 106100.0,
+   "since_pct": -28.6,
    "themes": [
+    "PCB(FPCB 등)",
     "온디바이스 AI",
     "소캠(SOCAMM)",
-    "반도체 기판(FC-BGA/PCB/MLB 등)",
-    "PCB(FPCB 등)"
+    "반도체 기판(FC-BGA/PCB/MLB 등)"
    ]
   },
   {
    "code": "095610",
    "name": "테스",
    "market": "KOSDAQ GLOBAL",
-   "marcap": 2133472000000,
+   "marcap": 2036672000000,
    "date": "2026-06-30",
    "change_pct": 15.7,
    "amount": 1573,
@@ -1454,8 +1490,8 @@
    "bottom": 53700.0,
    "bottom_date": "2026-03-31",
    "rise_pct": 287.3,
-   "now_close": 108600.0,
-   "since_pct": -47.8,
+   "now_close": 105000.0,
+   "since_pct": -49.5,
    "themes": [
     "전력반도체"
    ]
@@ -1464,7 +1500,7 @@
    "code": "281820",
    "name": "케이씨텍",
    "market": "KOSPI",
-   "marcap": 1872953330600,
+   "marcap": 1710604310400,
    "date": "2026-06-30",
    "change_pct": 26.6,
    "amount": 805,
@@ -1474,8 +1510,8 @@
    "bottom": 42000.0,
    "bottom_date": "2026-04-03",
    "rise_pct": 174.0,
-   "now_close": 93400.0,
-   "since_pct": -18.9,
+   "now_close": 86700.0,
+   "since_pct": -24.7,
    "themes": [
     "HBM(고대역폭메모리)",
     "반도체 재료/부품"
@@ -1485,7 +1521,7 @@
    "code": "031980",
    "name": "피에스케이홀딩스",
    "market": "KOSDAQ",
-   "marcap": 3736763053500,
+   "marcap": 3400389691500,
    "date": "2026-06-30",
    "change_pct": 18.8,
    "amount": 744,
@@ -1495,18 +1531,18 @@
    "bottom": 89600.0,
    "bottom_date": "2026-04-06",
    "rise_pct": 78.6,
-   "now_close": 170100.0,
-   "since_pct": 6.3,
+   "now_close": 157100.0,
+   "since_pct": -1.8,
    "themes": [
-    "반도체 장비",
-    "HBM(고대역폭메모리)"
+    "HBM(고대역폭메모리)",
+    "반도체 장비"
    ]
   },
   {
    "code": "037710",
    "name": "광주신세계",
    "market": "KOSPI",
-   "marcap": 251696676000,
+   "marcap": 248645807200,
    "date": "2026-06-26",
    "change_pct": 30.0,
    "amount": 1412,
@@ -1516,8 +1552,8 @@
    "bottom": 33200.0,
    "bottom_date": "2026-06-02",
    "rise_pct": 59.3,
-   "now_close": 32900.0,
-   "since_pct": -37.8,
+   "now_close": 32250.0,
+   "since_pct": -39.0,
    "themes": [
     "소매유통",
     "백화점"
@@ -1527,7 +1563,7 @@
    "code": "002990",
    "name": "금호건설",
    "market": "KOSPI",
-   "marcap": 353969753000,
+   "marcap": 340556162360,
    "date": "2026-06-26",
    "change_pct": 30.0,
    "amount": 567,
@@ -1537,12 +1573,12 @@
    "bottom": 3530.0,
    "bottom_date": "2026-06-02",
    "rise_pct": 87.8,
-   "now_close": 9440.0,
-   "since_pct": 42.4,
+   "now_close": 9040.0,
+   "since_pct": 36.3,
    "themes": [
     "건설 중소형",
-    "수자원(양적/질적 개선)",
-    "GTX(수도권 광역급행철도)"
+    "GTX(수도권 광역급행철도)",
+    "수자원(양적/질적 개선)"
    ]
   },
   {
@@ -1559,28 +1595,28 @@
    "bottom": 298000.0,
    "bottom_date": "2026-03-31",
    "rise_pct": 187.9,
-   "now_close": 460000.0,
-   "since_pct": -46.4,
+   "now_close": 470000.0,
+   "since_pct": -45.2,
    "themes": [
-    "조림사업",
-    "LNG(액화천연가스)",
-    "클라우드 컴퓨팅",
-    "SI(시스템통합)",
-    "지주사",
-    "스마트팩토리(스마트공장)",
-    "수소에너지(수소차/연료전지 등)",
     "블록체인",
-    "핀테크(FinTech)",
     "전기차(충전소/충전기)",
+    "SI(시스템통합)",
+    "클라우드 컴퓨팅",
+    "스마트팩토리(스마트공장)",
+    "핀테크(FinTech)",
+    "지주사",
+    "조림사업",
+    "수소에너지(수소차/연료전지 등)",
     "밸류업(24년 기업가치 제고계획 발표)",
-    "냉각시스템(액침냉각 등)"
+    "냉각시스템(액침냉각 등)",
+    "LNG(액화천연가스)"
    ]
   },
   {
    "code": "026940",
    "name": "부국철강",
    "market": "KOSPI",
-   "marcap": 39640000000,
+   "marcap": 38440000000,
    "date": "2026-06-23",
    "change_pct": 29.9,
    "amount": 843,
@@ -1590,15 +1626,15 @@
    "bottom": 1850.0,
    "bottom_date": "2026-06-08",
    "rise_pct": 103.0,
-   "now_close": 1972.0,
-   "since_pct": -47.5,
+   "now_close": 1944.0,
+   "since_pct": -48.2,
    "themes": []
   },
   {
    "code": "320000",
    "name": "한울반도체",
    "market": "KOSDAQ",
-   "marcap": 54548856300,
+   "marcap": 53719215900,
    "date": "2026-06-22",
    "change_pct": 29.9,
    "amount": 2005,
@@ -1608,15 +1644,15 @@
    "bottom": 7079.0,
    "bottom_date": "2026-04-06",
    "rise_pct": 227.0,
-   "now_close": 7950.0,
-   "since_pct": -65.7,
+   "now_close": 7900.0,
+   "since_pct": -65.9,
    "themes": []
   },
   {
    "code": "067290",
    "name": "JW신약",
    "market": "KOSDAQ",
-   "marcap": 133648490655,
+   "marcap": 129165522415,
    "date": "2026-06-22",
    "change_pct": 16.9,
    "amount": 1414,
@@ -1626,15 +1662,15 @@
    "bottom": 1246.0,
    "bottom_date": "2026-06-08",
    "rise_pct": 119.1,
-   "now_close": 2390.0,
-   "since_pct": -12.5,
+   "now_close": 2300.0,
+   "since_pct": -15.8,
    "themes": []
   },
   {
    "code": "001820",
    "name": "삼화콘덴서",
    "market": "KOSPI",
-   "marcap": 1126818000000,
+   "marcap": 1109146500000,
    "date": "2026-06-18",
    "change_pct": 25.6,
    "amount": 7390,
@@ -1644,19 +1680,19 @@
    "bottom": 51400.0,
    "bottom_date": "2026-03-30",
    "rise_pct": 269.8,
-   "now_close": 106000.0,
-   "since_pct": -44.2,
+   "now_close": 105600.0,
+   "since_pct": -44.5,
    "themes": [
     "스마트그리드(지능형전력망)",
-    "핵융합에너지",
-    "MLCC(적층세라믹콘덴서)"
+    "MLCC(적층세라믹콘덴서)",
+    "핵융합에너지"
    ]
   },
   {
    "code": "122640",
    "name": "예스티",
    "market": "KOSDAQ",
-   "marcap": 614897630000,
+   "marcap": 556439052500,
    "date": "2026-06-18",
    "change_pct": 18.4,
    "amount": 2618,
@@ -1666,8 +1702,8 @@
    "bottom": 18360.0,
    "bottom_date": "2026-04-06",
    "rise_pct": 117.0,
-   "now_close": 27950.0,
-   "since_pct": -29.9,
+   "now_close": 25550.0,
+   "since_pct": -35.9,
    "themes": [
     "LED장비"
    ]
@@ -1676,7 +1712,7 @@
    "code": "079650",
    "name": "서산",
    "market": "KOSDAQ",
-   "marcap": 146000000000,
+   "marcap": 138400000000,
    "date": "2026-06-18",
    "change_pct": 30.0,
    "amount": 526,
@@ -1686,8 +1722,8 @@
    "bottom": 952.0,
    "bottom_date": "2026-06-09",
    "rise_pct": 405.8,
-   "now_close": 7300.0,
-   "since_pct": 51.6,
+   "now_close": 6920.0,
+   "since_pct": 43.7,
    "themes": [
     "시멘트/레미콘"
    ]
@@ -1696,7 +1732,7 @@
    "code": "067290",
    "name": "JW신약",
    "market": "KOSDAQ",
-   "marcap": 133648490655,
+   "marcap": 129165522415,
    "date": "2026-06-17",
    "change_pct": 29.9,
    "amount": 948,
@@ -1706,15 +1742,15 @@
    "bottom": 1246.0,
    "bottom_date": "2026-06-08",
    "rise_pct": 87.4,
-   "now_close": 2390.0,
-   "since_pct": 2.4,
+   "now_close": 2300.0,
+   "since_pct": -1.5,
    "themes": []
   },
   {
    "code": "004710",
    "name": "한솔테크닉스",
    "market": "KOSPI",
-   "marcap": 440261191100,
+   "marcap": 389339414780,
    "date": "2026-06-17",
    "change_pct": 30.0,
    "amount": 817,
@@ -1724,13 +1760,13 @@
    "bottom": 4229.0,
    "bottom_date": "2026-04-02",
    "rise_pct": 262.7,
-   "now_close": 7870.0,
-   "since_pct": -48.7,
+   "now_close": 7330.0,
+   "since_pct": -52.2,
    "themes": [
+    "갤럭시 부품주",
+    "LED",
     "삼성페이",
     "페라이트",
-    "LED",
-    "갤럭시 부품주",
     "무선충전기술"
    ]
   },
@@ -1738,7 +1774,7 @@
    "code": "403870",
    "name": "HPSP",
    "market": "KOSDAQ GLOBAL",
-   "marcap": 3925710000000,
+   "marcap": 3695270000000,
    "date": "2026-06-15",
    "change_pct": 16.8,
    "amount": 27072,
@@ -1748,18 +1784,18 @@
    "bottom": 40350.0,
    "bottom_date": "2026-04-02",
    "rise_pct": 106.9,
-   "now_close": 47450.0,
-   "since_pct": -43.2,
+   "now_close": 44900.0,
+   "since_pct": -46.2,
    "themes": [
-    "반도체 장비",
-    "온디바이스 AI"
+    "온디바이스 AI",
+    "반도체 장비"
    ]
   },
   {
    "code": "093370",
    "name": "후성",
    "market": "KOSPI",
-   "marcap": 1115455432000,
+   "marcap": 1066117980200,
    "date": "2026-06-15",
    "change_pct": 17.8,
    "amount": 3816,
@@ -1769,21 +1805,21 @@
    "bottom": 6450.0,
    "bottom_date": "2026-03-23",
    "rise_pct": 247.3,
-   "now_close": 10280.0,
-   "since_pct": -54.1,
+   "now_close": 9980.0,
+   "since_pct": -55.4,
    "themes": [
     "여름",
-    "반도체 재료/부품",
-    "리튬",
+    "온실가스(탄소배출권)/탄소 포집·활용·저장(CCUS)",
     "日 수출 규제(국산화 등)",
-    "온실가스(탄소배출권)/탄소 포집·활용·저장(CCUS)"
+    "리튬",
+    "반도체 재료/부품"
    ]
   },
   {
    "code": "403870",
    "name": "HPSP",
    "market": "KOSDAQ GLOBAL",
-   "marcap": 3925710000000,
+   "marcap": 3695270000000,
    "date": "2026-06-12",
    "change_pct": 30.0,
    "amount": 11214,
@@ -1793,18 +1829,18 @@
    "bottom": 40350.0,
    "bottom_date": "2026-04-02",
    "rise_pct": 77.2,
-   "now_close": 47450.0,
-   "since_pct": -33.6,
+   "now_close": 44900.0,
+   "since_pct": -37.2,
    "themes": [
-    "반도체 장비",
-    "온디바이스 AI"
+    "온디바이스 AI",
+    "반도체 장비"
    ]
   },
   {
    "code": "240810",
    "name": "원익IPS",
    "market": "KOSDAQ GLOBAL",
-   "marcap": 4692420935600,
+   "marcap": 4388100749400,
    "date": "2026-06-12",
    "change_pct": 30.0,
    "amount": 6950,
@@ -1814,19 +1850,19 @@
    "bottom": 96000.0,
    "bottom_date": "2026-06-02",
    "rise_pct": 90.9,
-   "now_close": 93800.0,
-   "since_pct": -48.8,
+   "now_close": 89400.0,
+   "since_pct": -51.2,
    "themes": [
-    "반도체 장비",
     "OLED(유기 발광 다이오드)",
-    "태양광에너지"
+    "태양광에너지",
+    "반도체 장비"
    ]
   },
   {
    "code": "039030",
    "name": "이오테크닉스",
    "market": "KOSDAQ",
-   "marcap": 4977098200000,
+   "marcap": 4669109450000,
    "date": "2026-06-12",
    "change_pct": 21.4,
    "amount": 4751,
@@ -1836,19 +1872,19 @@
    "bottom": 367500.0,
    "bottom_date": "2026-03-31",
    "rise_pct": 66.5,
-   "now_close": 396500.0,
-   "since_pct": -35.2,
+   "now_close": 377500.0,
+   "since_pct": -38.3,
    "themes": [
-    "반도체 장비",
+    "LED장비",
     "HBM(고대역폭메모리)",
-    "LED장비"
+    "반도체 장비"
    ]
   },
   {
    "code": "093370",
    "name": "후성",
    "market": "KOSPI",
-   "marcap": 1115455432000,
+   "marcap": 1066117980200,
    "date": "2026-06-12",
    "change_pct": 20.5,
    "amount": 3309,
@@ -1858,21 +1894,21 @@
    "bottom": 6450.0,
    "bottom_date": "2026-03-23",
    "rise_pct": 194.7,
-   "now_close": 10280.0,
-   "since_pct": -45.9,
+   "now_close": 9980.0,
+   "since_pct": -47.5,
    "themes": [
     "여름",
-    "반도체 재료/부품",
-    "리튬",
+    "온실가스(탄소배출권)/탄소 포집·활용·저장(CCUS)",
     "日 수출 규제(국산화 등)",
-    "온실가스(탄소배출권)/탄소 포집·활용·저장(CCUS)"
+    "리튬",
+    "반도체 재료/부품"
    ]
   },
   {
    "code": "085620",
    "name": "미래에셋생명",
    "market": "KOSPI",
-   "marcap": 2254802400000,
+   "marcap": 2308874400000,
    "date": "2026-06-11",
    "change_pct": 29.9,
    "amount": 1613,
@@ -1882,8 +1918,8 @@
    "bottom": 13200.0,
    "bottom_date": "2026-03-13",
    "rise_pct": 122.3,
-   "now_close": 16500.0,
-   "since_pct": -43.8,
+   "now_close": 16780.0,
+   "since_pct": -42.8,
    "themes": [
     "생명보험"
    ]
@@ -1892,7 +1928,7 @@
    "code": "084370",
    "name": "유진테크",
    "market": "KOSDAQ",
-   "marcap": 2463474515000,
+   "marcap": 2293895804200,
    "date": "2026-06-11",
    "change_pct": 15.1,
    "amount": 1224,
@@ -1902,8 +1938,8 @@
    "bottom": 105600.0,
    "bottom_date": "2026-03-31",
    "rise_pct": 68.8,
-   "now_close": 109100.0,
-   "since_pct": -38.8,
+   "now_close": 100000.0,
+   "since_pct": -43.9,
    "themes": [
     "반도체 장비"
    ]
@@ -1912,7 +1948,7 @@
    "code": "007810",
    "name": "코리아써키트",
    "market": "KOSPI",
-   "marcap": 1626021636000,
+   "marcap": 1592445968000,
    "date": "2026-06-11",
    "change_pct": 20.3,
    "amount": 910,
@@ -1922,21 +1958,21 @@
    "bottom": 49250.0,
    "bottom_date": "2026-03-13",
    "rise_pct": 182.6,
-   "now_close": 67000.0,
-   "since_pct": -51.9,
+   "now_close": 67700.0,
+   "since_pct": -51.4,
    "themes": [
-    "CXL(컴퓨트익스프레스링크)",
     "갤럭시 부품주",
+    "CXL(컴퓨트익스프레스링크)",
+    "PCB(FPCB 등)",
     "소캠(SOCAMM)",
-    "반도체 기판(FC-BGA/PCB/MLB 등)",
-    "PCB(FPCB 등)"
+    "반도체 기판(FC-BGA/PCB/MLB 등)"
    ]
   },
   {
    "code": "183300",
    "name": "코미코",
    "market": "KOSDAQ",
-   "marcap": 1237854927500,
+   "marcap": 1173650833750,
    "date": "2026-06-11",
    "change_pct": 30.0,
    "amount": 791,
@@ -1946,15 +1982,15 @@
    "bottom": 20001.0,
    "bottom_date": "2026-03-30",
    "rise_pct": 178.9,
-   "now_close": 23850.0,
-   "since_pct": -57.2,
+   "now_close": 22750.0,
+   "since_pct": -59.2,
    "themes": []
   },
   {
    "code": "131290",
    "name": "티에스이",
    "market": "KOSDAQ",
-   "marcap": 2842787253000,
+   "marcap": 2665804389000,
    "date": "2026-06-11",
    "change_pct": 25.3,
    "amount": 755,
@@ -1964,19 +2000,19 @@
    "bottom": 98000.0,
    "bottom_date": "2026-03-12",
    "rise_pct": 165.3,
-   "now_close": 252000.0,
-   "since_pct": -3.1,
+   "now_close": 241000.0,
+   "since_pct": -7.3,
    "themes": [
-    "반도체 장비",
     "OLED(유기 발광 다이오드)",
-    "LED장비"
+    "LED장비",
+    "반도체 장비"
    ]
   },
   {
    "code": "093370",
    "name": "후성",
    "market": "KOSPI",
-   "marcap": 1115455432000,
+   "marcap": 1066117980200,
    "date": "2026-06-10",
    "change_pct": 20.1,
    "amount": 5102,
@@ -1986,21 +2022,21 @@
    "bottom": 6450.0,
    "bottom_date": "2026-03-23",
    "rise_pct": 151.8,
-   "now_close": 10280.0,
-   "since_pct": -36.7,
+   "now_close": 9980.0,
+   "since_pct": -38.5,
    "themes": [
     "여름",
-    "반도체 재료/부품",
-    "리튬",
+    "온실가스(탄소배출권)/탄소 포집·활용·저장(CCUS)",
     "日 수출 규제(국산화 등)",
-    "온실가스(탄소배출권)/탄소 포집·활용·저장(CCUS)"
+    "리튬",
+    "반도체 재료/부품"
    ]
   },
   {
    "code": "126640",
    "name": "화신정공",
    "market": "KOSDAQ",
-   "marcap": 106569966400,
+   "marcap": 104291332250,
    "date": "2026-06-10",
    "change_pct": 29.9,
    "amount": 972,
@@ -2010,15 +2046,15 @@
    "bottom": 1450.0,
    "bottom_date": "2026-03-27",
    "rise_pct": 205.5,
-   "now_close": 3030.0,
-   "since_pct": -31.6,
+   "now_close": 2975.0,
+   "since_pct": -32.8,
    "themes": []
   },
   {
    "code": "095610",
    "name": "테스",
    "market": "KOSDAQ GLOBAL",
-   "marcap": 2133472000000,
+   "marcap": 2036672000000,
    "date": "2026-06-09",
    "change_pct": 22.7,
    "amount": 1570,
@@ -2028,8 +2064,8 @@
    "bottom": 53700.0,
    "bottom_date": "2026-03-31",
    "rise_pct": 200.6,
-   "now_close": 108600.0,
-   "since_pct": -32.7,
+   "now_close": 105000.0,
+   "since_pct": -34.9,
    "themes": [
     "전력반도체"
    ]
@@ -2038,7 +2074,7 @@
    "code": "319660",
    "name": "피에스케이",
    "market": "KOSDAQ",
-   "marcap": 3403588895000,
+   "marcap": 3157371826000,
    "date": "2026-06-09",
    "change_pct": 24.3,
    "amount": 1541,
@@ -2048,18 +2084,18 @@
    "bottom": 57800.0,
    "bottom_date": "2026-03-12",
    "rise_pct": 139.1,
-   "now_close": 115900.0,
-   "since_pct": -16.1,
+   "now_close": 108900.0,
+   "since_pct": -21.2,
    "themes": [
-    "반도체 장비",
-    "시스템반도체"
+    "시스템반도체",
+    "반도체 장비"
    ]
   },
   {
    "code": "089970",
    "name": "브이엠",
    "market": "KOSDAQ",
-   "marcap": 1088798665000,
+   "marcap": 1030375322000,
    "date": "2026-06-09",
    "change_pct": 27.0,
    "amount": 911,
@@ -2069,15 +2105,15 @@
    "bottom": 38000.0,
    "bottom_date": "2026-03-13",
    "rise_pct": 101.6,
-   "now_close": 40200.0,
-   "since_pct": -47.5,
+   "now_close": 38600.0,
+   "since_pct": -49.6,
    "themes": []
   },
   {
    "code": "001740",
    "name": "SK네트웍스",
    "market": "KOSPI",
-   "marcap": 1139373289520,
+   "marcap": 1117307961730,
    "date": "2026-06-08",
    "change_pct": 30.0,
    "amount": 7128,
@@ -2087,20 +2123,20 @@
    "bottom": 4900.0,
    "bottom_date": "2026-03-09",
    "rise_pct": 189.2,
-   "now_close": 5660.0,
-   "since_pct": -60.1,
+   "now_close": 5570.0,
+   "since_pct": -60.7,
    "themes": [
-    "호텔/리조트",
     "전기차(충전소/충전기)",
-    "종합상사",
-    "마켓컬리(kurly)"
+    "마켓컬리(kurly)",
+    "호텔/리조트",
+    "종합상사"
    ]
   },
   {
    "code": "457370",
    "name": "한켐",
    "market": "KOSDAQ",
-   "marcap": 65827813440,
+   "marcap": 64133715300,
    "date": "2026-06-05",
    "change_pct": 29.9,
    "amount": 1103,
@@ -2110,8 +2146,8 @@
    "bottom": 7370.0,
    "bottom_date": "2026-05-20",
    "rise_pct": 99.1,
-   "now_close": 8040.0,
-   "since_pct": -45.2,
+   "now_close": 7880.0,
+   "since_pct": -46.3,
    "themes": [
     "MLCC(적층세라믹콘덴서)"
    ]
@@ -2120,7 +2156,7 @@
    "code": "036930",
    "name": "주성엔지니어링",
    "market": "KOSDAQ GLOBAL",
-   "marcap": 8361953667900,
+   "marcap": 7790235879600,
    "date": "2026-06-04",
    "change_pct": 27.2,
    "amount": 15836,
@@ -2130,21 +2166,21 @@
    "bottom": 56800.0,
    "bottom_date": "2026-03-05",
    "rise_pct": 341.0,
-   "now_close": 179200.0,
-   "since_pct": -28.5,
+   "now_close": 168200.0,
+   "since_pct": -32.9,
    "themes": [
-    "반도체 장비",
-    "플렉서블 디스플레이",
     "OLED(유기 발광 다이오드)",
+    "플렉서블 디스플레이",
     "태양광에너지",
-    "LED장비"
+    "LED장비",
+    "반도체 장비"
    ]
   },
   {
    "code": "004170",
    "name": "신세계",
    "market": "KOSPI",
-   "marcap": 2408521155000,
+   "marcap": 2314069345000,
    "date": "2026-06-04",
    "change_pct": 15.8,
    "amount": 1044,
@@ -2154,12 +2190,12 @@
    "bottom": 295500.0,
    "bottom_date": "2026-03-31",
    "rise_pct": 123.0,
-   "now_close": 252000.0,
-   "since_pct": -61.8,
+   "now_close": 245500.0,
+   "since_pct": -62.7,
    "themes": [
     "서울고속버스터미널 재개발 수혜",
-    "부동산 보유 자산주",
     "소매유통",
+    "부동산 보유 자산주",
     "면세점",
     "백화점"
    ]
@@ -2178,8 +2214,8 @@
    "bottom": 78200.0,
    "bottom_date": "2026-03-31",
    "rise_pct": 113.2,
-   "now_close": 56000.0,
-   "since_pct": -66.4,
+   "now_close": 56400.0,
+   "since_pct": -66.2,
    "themes": [
     "로봇(산업용/협동로봇 등)"
    ]
@@ -2188,7 +2224,7 @@
    "code": "032830",
    "name": "삼성생명",
    "market": "KOSPI",
-   "marcap": 49000000000000,
+   "marcap": 49300000000000,
    "date": "2026-06-02",
    "change_pct": 17.1,
    "amount": 3545,
@@ -2198,8 +2234,8 @@
    "bottom": 190500.0,
    "bottom_date": "2026-03-09",
    "rise_pct": 152.0,
-   "now_close": 243000.0,
-   "since_pct": -49.4,
+   "now_close": 249000.0,
+   "since_pct": -48.1,
    "themes": [
     "S7(삼성전자/SK하이닉스 등)",
     "생명보험"
@@ -2209,7 +2245,7 @@
    "code": "090360",
    "name": "로보스타",
    "market": "KOSDAQ",
-   "marcap": 573300000000,
+   "marcap": 572325000000,
    "date": "2026-06-02",
    "change_pct": 30.0,
    "amount": 2478,
@@ -2219,8 +2255,8 @@
    "bottom": 54800.0,
    "bottom_date": "2026-04-07",
    "rise_pct": 189.8,
-   "now_close": 57700.0,
-   "since_pct": -63.7,
+   "now_close": 58700.0,
+   "since_pct": -63.0,
    "themes": [
     "지능형로봇/인공지능(AI)",
     "3D 프린터"
@@ -2230,7 +2266,7 @@
    "code": "035420",
    "name": "NAVER",
    "market": "KOSPI",
-   "marcap": 26406103651200,
+   "marcap": 26497368986400,
    "date": "2026-06-01",
    "change_pct": 16.0,
    "amount": 39649,
@@ -2240,32 +2276,32 @@
    "bottom": 190800.0,
    "bottom_date": "2026-05-20",
    "rise_pct": 42.3,
-   "now_close": 172600.0,
-   "since_pct": -36.4,
+   "now_close": 174300.0,
+   "since_pct": -35.8,
    "themes": [
-    "SNS(소셜네트워크서비스)",
-    "모바일콘텐츠(스마트폰/태블릿PC)",
-    "메타버스(Metaverse)",
-    "클라우드 컴퓨팅",
-    "자율주행차",
-    "모바일게임(스마트폰)",
-    "NFT(대체불가토큰)",
-    "게임",
-    "AI 챗봇(챗GPT 등)",
+    "마이데이터",
     "음성인식",
-    "블록체인",
-    "핀테크(FinTech)",
-    "웹툰",
     "인터넷 대표주",
+    "AI 챗봇(챗GPT 등)",
+    "블록체인",
+    "자율주행차",
+    "웹툰",
+    "메타버스(Metaverse)",
+    "NFT(대체불가토큰)",
+    "클라우드 컴퓨팅",
+    "모바일콘텐츠(스마트폰/태블릿PC)",
+    "SNS(소셜네트워크서비스)",
+    "핀테크(FinTech)",
     "스테이블코인",
-    "마이데이터"
+    "모바일게임(스마트폰)",
+    "게임"
    ]
   },
   {
    "code": "066570",
    "name": "LG전자",
    "market": "KOSPI",
-   "marcap": 25589176629800,
+   "marcap": 25410003528000,
    "date": "2026-06-01",
    "change_pct": 29.9,
    "amount": 19317,
@@ -2275,32 +2311,32 @@
    "bottom": 103600.0,
    "bottom_date": "2026-03-31",
    "rise_pct": 267.3,
-   "now_close": 155700.0,
-   "since_pct": -59.1,
+   "now_close": 156300.0,
+   "since_pct": -58.9,
    "themes": [
-    "마이크로 LED",
+    "피지컬 AI/휴머노이드 로봇",
     "IT 대표주",
-    "가상현실(VR)",
-    "자율주행차",
-    "LED",
-    "OLED(유기 발광 다이오드)",
-    "공기청정기",
     "지능형로봇/인공지능(AI)",
+    "자율주행차",
+    "가상현실(VR)",
+    "공기청정기",
+    "LED",
+    "스마트홈(홈네트워크)",
     "5G(5세대 이동통신)",
     "제습기",
-    "스마트홈(홈네트워크)",
-    "무선충전기술",
-    "전력저장장치(ESS)",
-    "피지컬 AI/휴머노이드 로봇",
+    "OLED(유기 발광 다이오드)",
     "전기차",
-    "냉각시스템(액침냉각 등)"
+    "전력저장장치(ESS)",
+    "냉각시스템(액침냉각 등)",
+    "마이크로 LED",
+    "무선충전기술"
    ]
   },
   {
    "code": "064400",
    "name": "LG씨엔에스",
    "market": "KOSPI",
-   "marcap": 7053297014400,
+   "marcap": 7121117178000,
    "date": "2026-06-01",
    "change_pct": 26.3,
    "amount": 15751,
@@ -2310,11 +2346,11 @@
    "bottom": 55400.0,
    "bottom_date": "2026-03-31",
    "rise_pct": 159.4,
-   "now_close": 72200.0,
-   "since_pct": -49.8,
+   "now_close": 73600.0,
+   "since_pct": -48.8,
    "themes": [
-    "클라우드 컴퓨팅",
     "SI(시스템통합)",
+    "클라우드 컴퓨팅",
     "스마트팩토리(스마트공장)",
     "스테이블코인"
    ]
@@ -2323,7 +2359,7 @@
    "code": "018260",
    "name": "삼성에스디에스",
    "market": "KOSPI",
-   "marcap": 16520160300000,
+   "marcap": 16481471400000,
    "date": "2026-06-01",
    "change_pct": 21.1,
    "amount": 10495,
@@ -2333,23 +2369,23 @@
    "bottom": 146100.0,
    "bottom_date": "2026-04-13",
    "rise_pct": 147.8,
-   "now_close": 212000.0,
-   "since_pct": -41.4,
+   "now_close": 214500.0,
+   "since_pct": -40.7,
    "themes": [
     "IT 대표주",
-    "클라우드 컴퓨팅",
-    "SI(시스템통합)",
+    "지능형로봇/인공지능(AI)",
     "AI 챗봇(챗GPT 등)",
-    "스마트팩토리(스마트공장)",
     "블록체인",
-    "지능형로봇/인공지능(AI)"
+    "SI(시스템통합)",
+    "클라우드 컴퓨팅",
+    "스마트팩토리(스마트공장)"
    ]
   },
   {
    "code": "108490",
    "name": "로보티즈",
    "market": "KOSDAQ",
-   "marcap": 3300981300000,
+   "marcap": 3616408402000,
    "date": "2026-06-01",
    "change_pct": 23.7,
    "amount": 5398,
@@ -2359,19 +2395,19 @@
    "bottom": 201000.0,
    "bottom_date": "2026-03-04",
    "rise_pct": 100.2,
-   "now_close": 226500.0,
-   "since_pct": -43.7,
+   "now_close": 250500.0,
+   "since_pct": -37.8,
    "themes": [
-    "지능형로봇/인공지능(AI)",
     "로봇(산업용/협동로봇 등)",
-    "피지컬 AI/휴머노이드 로봇"
+    "피지컬 AI/휴머노이드 로봇",
+    "지능형로봇/인공지능(AI)"
    ]
   },
   {
    "code": "022100",
    "name": "포스코DX",
    "market": "KOSPI",
-   "marcap": 2887139503710,
+   "marcap": 2829366306690,
    "date": "2026-06-01",
    "change_pct": 19.3,
    "amount": 3097,
@@ -2381,24 +2417,23 @@
    "bottom": 28400.0,
    "bottom_date": "2026-03-04",
    "rise_pct": 36.3,
-   "now_close": 18940.0,
-   "since_pct": -51.1,
+   "now_close": 18610.0,
+   "since_pct": -51.9,
    "themes": [
-    "황사/미세먼지",
-    "클라우드 컴퓨팅",
-    "SI(시스템통합)",
-    "스마트팩토리(스마트공장)",
     "스마트홈(홈네트워크)",
+    "SI(시스템통합)",
+    "클라우드 컴퓨팅",
+    "스마트팩토리(스마트공장)",
     "스마트그리드(지능형전력망)",
-    "전력저장장치(ESS)",
-    "피지컬 AI/휴머노이드 로봇"
+    "황사/미세먼지",
+    "전력저장장치(ESS)"
    ]
   },
   {
    "code": "181710",
    "name": "NHN",
    "market": "KOSPI",
-   "marcap": 1658475904500,
+   "marcap": 1587352181500,
    "date": "2026-06-01",
    "change_pct": 17.1,
    "amount": 559,
@@ -2408,14 +2443,14 @@
    "bottom": 33100.0,
    "bottom_date": "2026-03-04",
    "rise_pct": 80.1,
-   "now_close": 51400.0,
-   "since_pct": -13.8,
+   "now_close": 48750.0,
+   "since_pct": -18.2,
    "themes": [
-    "모바일게임(스마트폰)",
-    "전자결제(전자화폐)",
-    "게임",
+    "재택근무/스마트워크",
     "웹툰",
-    "재택근무/스마트워크"
+    "모바일게임(스마트폰)",
+    "게임",
+    "전자결제(전자화폐)"
    ]
   }
  ]
