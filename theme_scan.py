@@ -351,11 +351,13 @@ def main():
     force = os.environ.get('FORCE') == '1'
     asof = reference_date()
     if not force:
-        if asof != now.date():
-            print(f'오늘({now.date()})은 휴장이거나 아직 데이터가 없어요 (최근 거래일 {asof}). 종료합니다.')
-            return 0
-        if now.hour < 16:
+        if asof == now.date() and now.hour < 16:
             print('장 마감 후 데이터가 확정되기 전(16시 이전)이라 종료합니다.')
+            return 0
+        # 깃허브가 예약 실행을 다음날 새벽으로 미룬 경우엔 전날 데이터로 스캔
+        late_run = (asof == now.date() - timedelta(days=1) and now.hour < 16)
+        if asof != now.date() and not late_run:
+            print(f'오늘({now.date()})은 휴장이거나 아직 데이터가 없어요 (최근 거래일 {asof}). 종료합니다.')
             return 0
 
     uni = get_universe()
